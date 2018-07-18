@@ -1,3 +1,92 @@
+# guitarList
+
+#### An app that allows users to add and update musical gear to a personal collection (_This is an Epicodus exercise that is a work in progress_)
+
+#### By _**Matt Miller**_
+
+## Project Description
+<strong>Name of Project:</strong> guitarList (working title)<br>
+
+<strong>Project’s Purpose or Goal:</strong> CRUD app that allows user to manage current inventory and wishlist of musical equipment (specifically guitars, basses, amps, and pedals)<br>
+
+<strong>Minimum features the project requires to meet this purpose or goal:</strong><br>
+
+   * Display list of current items in inventory<br>
+   * Click on item to see details<br>
+   * Add new item to inventory<br>
+   * Edit details of an item<br>
+   * Delete item from inventory<br>
+
+<strong>Tools, frameworks, libraries, APIs, modules and/or other resources used to create this MVP:<strong><br>
+
+   * Custom Java API<br>
+   * React<br>
+   * React Redux<br>
+
+Stretch goals:<br>
+
+   * Filter inventory by type<br>
+   * Search inventory by query<br>
+   * Create multiple accounts<br>
+
+## Relevant Repositories
+
+* Custom Java API: https://github.com/mattfmiller/equiplist
+
+
+#### User Story
+
+A. As a user, I want to see all instruments in the collection <br>
+B. As a user, I want to see all guitars in the collection <br>
+C. As a user, I want to see all amps in the collection <br>
+D. As a user, I want to see all pedals in the collection <br>
+E. As a user, I want to see specific information about a single guitar<br>
+F. As a user, I want to see specific information about a single amp<br>
+G. As a user, I want to see specific information about a single pedal<br>
+H. As a user, I want to be able to add a guitar to the database<br>
+I. As a user, I want to be able to add an amp to the database<br>
+J. As a user, I want to be able to add a pedal to the database<br>
+K. As a user, I want to see which guitar type(s) a single guitar is associated with<br>
+L. As a user, I want to be able to add a guitar type to a guitar<br>
+M. As a user, I want to see all guitars of a specific guitar type<br>
+N. As a user, I want to be able to add a note on an instrument<br>
+O. As a user, I want to see all notes for an instrument<br>
+P. As a user, I want to edit instrument details when they change<br>
+Q. As a user, I want to delete instruments when they are no longer in my collection or wantlist.
+R. As a user, I want to delete notes that are no longer relevant<br>
+S. As a user, I want to delete a guitar type association in case of error<br>
+
+## Design
+
+Landing Page:
+![alt tag](assets/images/guitarList-landing-page.jpg "Landing Page")
+
+Instrument Details:
+![alt tag](assets/images/guitarList-instrument-details.jpg "Landing Page")
+
+## Known Bugs
+
+* N/A
+
+## Support and contact details
+
+For support, contact: matt.f.miller@live.com
+
+## Technologies Used
+
+* Java
+* SQL Database
+* JavaScript
+* React
+
+### License
+
+This software is licensed under the GPL license.
+
+Copyright © 2018 **Matt Miller**
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -300,7 +389,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1989,7 +2078,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
@@ -2429,7 +2518,7 @@ To resolve this:
 1. Open an issue on the dependency's issue tracker and ask that the package be published pre-compiled.
   * Note: Create React App can consume both CommonJS and ES modules. For Node.js compatibility, it is recommended that the main entry point is CommonJS. However, they can optionally provide an ES module entry point with the `module` field in `package.json`. Note that **even if a library provides an ES Modules version, it should still precompile other ES6 features to ES5 if it intends to support older browsers**.
 
-2. Fork the package and publish a corrected version yourself. 
+2. Fork the package and publish a corrected version yourself.
 
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 

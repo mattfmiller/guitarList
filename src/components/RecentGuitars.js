@@ -5,8 +5,8 @@ import './styles/List.css';
 
 function RecentGuitars(props) {
   let recentGuitars = [];
-  for (var i = props.guitars.length -1; i > props.guitars.length - 4; i--) {
-    recentGuitars.push(props.guitars[i]);
+  for (var i = props.guitarsInCollection.length -1; i > props.guitarsInCollection.length - 4; i--) {
+    recentGuitars.push(props.guitarsInCollection[i]);
   }
   return(
     <div className="container">
@@ -14,6 +14,7 @@ function RecentGuitars(props) {
          <Guitar imageUrl = {guitar.imageUrl}
           manufacturer = {guitar.manufacturer}
           model = {guitar.model}
+          id = {guitar.id}
           key = {guitar.id} />
       )}
     </div>
@@ -21,7 +22,7 @@ function RecentGuitars(props) {
 }
 
 RecentGuitars.propTypes = {
-  guitars:PropTypes.array,
+  guitarsInCollection:PropTypes.array,
 };
 
 export default RecentGuitars;

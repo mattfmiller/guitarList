@@ -6,10 +6,11 @@ import './styles/List.css';
 function GuitarCollection(props) {
   return(
     <div className="container">
-      {props.guitars.map((guitar) =>
+      {props.guitarsInCollection.map((guitar) =>
          <Guitar imageUrl = {guitar.imageUrl}
           manufacturer = {guitar.manufacturer}
           model = {guitar.model}
+          id = {guitar.id}
           key = {guitar.id} />
       )}
     </div>
@@ -17,7 +18,7 @@ function GuitarCollection(props) {
 }
 
 GuitarCollection.propTypes = {
-  guitars:PropTypes.array,
+  guitarsInCollection:PropTypes.array,
 };
 
 export default GuitarCollection;

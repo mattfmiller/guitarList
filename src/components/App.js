@@ -4,12 +4,15 @@ import './styles/App.css';
 import Header from './Header';
 import Recent from './Recent';
 import GuitarCollection from './GuitarCollection';
+import AmpCollection from './AmpCollection';
+import PedalCollection from './PedalCollection';
+import GuitarSpecs from './GuitarSpecs';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      guitars: [
+      guitarsInCollection: [
         {
             bodyWood: "Mahogany",
             finish: "Lacquer",
@@ -187,6 +190,8 @@ class App extends Component {
             sold: 0
         }
       ],
+      ampsInCollection: [],
+      pedalsInCollection: []
     };
   }
   render() {
@@ -194,8 +199,16 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/' render={() => <Recent guitars={this.state.guitars}/>}/>
-          <Route path='/guitars' render={() => <GuitarCollection guitars={this.state.guitars}/>}/>
+          <Route exact path='/' render={() => <Recent guitarsInCollection={this.state.guitarsInCollection} ampsInCollection={this.state.ampsInCollection}/>}/>
+
+          <Route exact path='/guitars' render={() => <GuitarCollection guitarsInCollection={this.state.guitarsInCollection}/>}/>
+
+          <Route exact path='/amps' render={() => <AmpCollection ampsInCollection={this.state.ampsInCollection}/>}/>
+
+          <Route exact path='/pedals' render={() => <PedalCollection pedalsInCollection={this.state.pedalsInCollection}/>}/>
+
+          <Route exact path = '/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId} />} />
+
         </Switch>
       </div>
     );

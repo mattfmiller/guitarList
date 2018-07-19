@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Guitar from './Guitar';
+import './styles/List.css';
 
 function RecentGuitars(props) {
   console.log(props.recentGuitars);

@@ -91,7 +91,7 @@ class App extends Component {
             serialNumber: "xxx",
             year: 1999,
             weight: 10.8,
-            imageUrl: "https://www.mansons.co.uk/userfiles/shop/products/main/main_6278.jpg",
+            imageUrl: "https://cdn.shopify.com/s/files/1/0703/6443/products/tmg-guitar-company-gatton_2048x2048.jpg?v=1435610374",
             current: true,
             wishlist: false,
             paid: 1500,

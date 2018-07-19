@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import './styles/Instrument.css';
 
 function Guitar(props) {
   console.log(props);
   return(
-    <div>
+    <div className='instrument'>
       <img src={props.imageUrl}/>
       <h2>{props.manufacturer} - {props.model}</h2>
     </div>

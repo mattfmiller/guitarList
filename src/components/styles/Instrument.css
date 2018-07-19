@@ -1,0 +1,18 @@
+.instrument {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 50px;
+  height: 400px;
+  width: 400px;
+  align-items: center;
+}
+
+.instrument img {
+  width: 400px;
+}
+
+.instrument h2 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}

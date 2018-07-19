@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './../assets/images/les-paul.png';
 import './styles/App.css';
 import Header from './Header';
 

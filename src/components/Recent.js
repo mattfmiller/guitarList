@@ -5,8 +5,11 @@ import RecentGuitars from './RecentGuitars'
 function Recent(props) {
   console.log(props.guitars);
   return(
-    <div className='container'>
-      <RecentGuitars guitars={props.guitars} />
+    <div>
+      <p>RECENT GUITARS:</p>
+      <div className='container'>
+        <RecentGuitars guitars={props.guitars} />
+      </div>
     </div>
   );
 }

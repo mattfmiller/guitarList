@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import './styles/Instrument.css';
 
 function Guitar(props) {
-  console.log(props);
   return(
     <div className='instrument'>
       <img src={props.imageUrl}/>

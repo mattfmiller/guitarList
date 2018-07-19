@@ -5,8 +5,7 @@ import './styles/List.css';
 
 function RecentGuitars(props) {
   let recentGuitars = [];
-  for (var i = props.guitars.length -1; i > props.guitars.length - 3; i--) {
-    console.log(i);
+  for (var i = props.guitars.length -1; i > props.guitars.length - 4; i--) {
     recentGuitars.push(props.guitars[i]);
   }
   return(

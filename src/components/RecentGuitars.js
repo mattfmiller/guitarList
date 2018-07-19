@@ -4,10 +4,14 @@ import Guitar from './Guitar';
 import './styles/List.css';
 
 function RecentGuitars(props) {
-  console.log(props.recentGuitars);
+  let recentGuitars = [];
+  for (var i = props.guitars.length -1; i > props.guitars.length - 3; i--) {
+    console.log(i);
+    recentGuitars.push(props.guitars[i]);
+  }
   return(
     <div className="container">
-      {props.recentGuitars.map((guitar, index) =>
+      {recentGuitars.map((guitar) =>
          <Guitar imageUrl = {guitar.imageUrl}
           manufacturer = {guitar.manufacturer}
           model = {guitar.model}
@@ -18,7 +22,7 @@ function RecentGuitars(props) {
 }
 
 RecentGuitars.propTypes = {
-  recentGuitars:PropTypes.array,
+  guitars:PropTypes.array,
 };
 
 export default RecentGuitars;

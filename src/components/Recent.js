@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import RecentGuitars from './RecentGuitars'
 
 function Recent(props) {
-  console.log(props.recentGuitars);
+  console.log(props.guitars);
   return(
     <div className='container'>
-      <RecentGuitars recentGuitars={props.recentGuitars} />
+      <RecentGuitars guitars={props.guitars} />
     </div>
   );
 }
 
 Recent.propTypes = {
-  recentGuitars:PropTypes.array,
+  guitars:PropTypes.array,
 };
 
 export default Recent;

@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recentGuitars: [
+      guitars: [
         {
             bodyWood: "Mahogany",
             finish: "Lacquer",
@@ -107,7 +107,7 @@ class App extends Component {
         <Header />
         <p className="App-intro">GUITARS</p>
         <Switch>
-          <Route exact path='/' render={() => <Recent recentGuitars={this.state.recentGuitars}/>}/>
+          <Route exact path='/' render={() => <Recent guitars={this.state.guitars}/>}/>
         </Switch>
       </div>
     );

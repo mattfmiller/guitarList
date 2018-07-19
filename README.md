@@ -58,11 +58,14 @@ S. As a user, I want to delete a guitar type association in case of error<br>
 
 ## Design
 
+Component Tree:
+![alt tag](src/assets/images/component-tree.jpg "Component Tree")
+
 Landing Page:
-![alt tag](assets/images/guitarList-landing-page.jpg "Landing Page")
+![alt tag](src/assets/images/guitarList-landing-page.jpg "Landing Page")
 
 Instrument Details:
-![alt tag](assets/images/guitarList-instrument-details.jpg "Landing Page")
+![alt tag](src/assets/images/guitarList-instrument-details.jpg "Landing Page")
 
 ## Known Bugs
 
@@ -224,7 +227,7 @@ my-app/
   package.json
   public/
     index.html
-    favicon.ico
+    favicon.png
   src/
     App.css
     App.js

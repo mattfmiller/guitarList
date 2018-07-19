@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import logo from './../assets/images/guitar-icon.png';
 import guitarIcon from './../assets/images/guitar-icon5.png';
 import ampIcon from './../assets/images/amp-icon2.png';
@@ -9,32 +10,32 @@ function Header() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
+        <Link style={{textDecoration: 'none', color: 'white'}} to='/'><div>
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">guitarList</h1>
-        </div>
+        </div></Link>
         <div>
           <img src={guitarIcon} className="instrument-logo" />
           <ul>
-            <li>GUITAR COLLECTION</li>
-            <li>GUITAR WISHLIST</li>
-            <li> + ADD A GUITAR</li>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars'><li>GUITAR COLLECTION</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/wishlist'><li>GUITAR WISHLIST</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/new'><li> + ADD A GUITAR</li></Link>
           </ul>
         </div>
         <div>
           <img src={ampIcon} className="instrument-logo" />
           <ul>
-            <li>AMP COLLECTION</li>
-            <li>AMP WISHLIST</li>
-            <li> + ADD AN AMP</li>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/amps'><li>AMP COLLECTION</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/wishlist'><li>AMP WISHLIST</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/new'><li> + ADD AN AMP</li></Link>
           </ul>
         </div>
         <div>
           <img src={pedalIcon} className="instrument-logo" />
           <ul>
-            <li>PEDAL COLLECTION</li>
-            <li>PEDAL WISHLIST</li>
-            <li> + ADD A PEDAL</li>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals'><li>PEDAL COLLECTION</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/wishlist'><li>PEDAL WISHLIST</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/new'><li> + ADD A PEDAL</li></Link>
           </ul>
         </div>
         <div>

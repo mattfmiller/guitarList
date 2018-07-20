@@ -11,6 +11,12 @@ function AmpSpecs(props) {
     }
   });}
 
+  {props.ampsInWishlist.forEach(function(amp) {
+    if (amp.id === parseInt(props.selectedAmpId)) {
+      selectedAmp = amp;
+    }
+  });}
+
   let editPath = '/amps/' + props.selectedAmpId + '/edit'
 
   return(
@@ -24,7 +30,8 @@ function AmpSpecs(props) {
 
 const mapStateToProps = state => {
   return  {
-    ampsInCollection: state.ampsInCollection
+    ampsInCollection: state.ampsInCollection,
+    ampsInWishlist: state.ampsInWishlist
   }
 }
 

@@ -11,6 +11,12 @@ function PedalSpecs(props) {
     }
   });}
 
+  {props.pedalsInWishlist.forEach(function(pedal) {
+    if (pedal.id === parseInt(props.selectedPedalId)) {
+      selectedPedal = pedal;
+    }
+  });}
+
   let editPath = '/pedals/' + props.selectedPedalId + '/edit'
 
   return(
@@ -24,7 +30,8 @@ function PedalSpecs(props) {
 
 const mapStateToProps = state => {
   return  {
-    pedalsInCollection: state.pedalsInCollection
+    pedalsInCollection: state.pedalsInCollection,
+    pedalsInWishlist: state.pedalsInWishlist
   }
 }
 

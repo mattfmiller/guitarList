@@ -12,7 +12,6 @@ function GuitarWishlist(props) {
           manufacturer = {guitar.manufacturer}
           model = {guitar.model}
           id = {guitar.id}
-          wishlist = {guitar.wishlist}
           key = {guitar.id} />
       )}
     </div>

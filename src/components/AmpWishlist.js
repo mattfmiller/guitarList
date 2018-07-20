@@ -1,11 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import PropTypes from "prop-types";
+import Amp from './Amp';
+import './styles/List.css';
 
 function AmpWishlist(props) {
   return(
-    <div>
-      AmpWishlist
+    <div className="container">
+      {props.ampsInWishlist.map((amp) =>
+         <Amp imageUrl = {amp.imageUrl}
+          manufacturer = {amp.manufacturer}
+          model = {amp.model}
+          id = {amp.id}
+          key = {amp.id} />
+      )}
     </div>
   );
 }
 
-export default AmpWishlist;
+const mapStateToProps = state => {
+  return  {
+    ampsInWishlist: state.ampsInWishlist
+  }
+}
+
+export default connect(mapStateToProps)(AmpWishlist);

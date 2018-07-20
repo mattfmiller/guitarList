@@ -1,19 +1,65 @@
 import React from 'react';
 
 function NewGuitarForm(props) {
+  const f = false;
+  let t = true;
+
   let _manufacturer = null;
   let _model = null;
+  let _wishlist = null;
+  let _country = null;
+  let _serialNumber = null;
+  let _year = null;
+  let _imageUrl = null;
+  let _paid = null;
+  let _sold = null;
+  let _weight = null;
+  let _bodyWood = null;
+  let _finish = null;
+  let _color = null;
+  let _binding = null;
+  let _neckWood = null;
+  let _neckType = null;
+  let _neckProfile = null;
+  let _fretboardWood = null;
+  let _fretboardRadius = null;
+  let _frets = null;
+  let _fretMaterial = null;
+  let _inlays = null;
+  let _nutMaterial = null;
+  let _nutWidth = null;
+  let _scaleLength = null;
+  let _neckPickup = null;
+  let _middlePickup = null;
+  let _bridgePickup = null;
+  let _volumePots = null;
+  let _tonePots = null;
+  let _capacitor = null;
+  let _tuners = null;
+  let _tunerButtons = null;
+  let _bridge = null;
+  let _tailpiece = null;
+  let _guitarSwitch = null;
+  let _knobs = null;
+  let _pickguard = null;
+  let _controls = null;
+  let _guitarCase = null;
+
+  function handleClick(event) {
+    event.preventDefault();
+    console.log({wishlist: JSON.parse(_wishlist.value), manufacturer: _manufacturer.value});
+  }
 
   return(
     <div>
       <h2>Add A New Guitar Form</h2>
-      <form>
+      <form onSubmit={handleClick}>
         <div>
           <label>Add to Collection or Wishlist?</label>
           <br/>
-          <select id ='wishlist' ref=>{(select) => {_wishlist=select;}}>
-            <option value=false>Collection</option>
-            <optin value=true>Wishlist</optin>
+          <select id ='wishlist' ref={(select) => {_wishlist=select;}}>
+            <option value={f}>Collection</option>
+            <option value={t}>Wishlist</option>
           </select>
         </div>
         <div>
@@ -49,15 +95,15 @@ function NewGuitarForm(props) {
             ref={(input) => {_serialNumber = input;}}/>
         </div>
         <div>
-          <label>year</label>
+          <label>Year</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='year'
             ref={(input) => {_year = input;}}/>
         </div>
         <div>
-          <label>imageUrl</label>
+          <label>Image URL</label>
           <br/>
           <input
             type='text'
@@ -65,23 +111,15 @@ function NewGuitarForm(props) {
             ref={(input) => {_imageUrl = input;}}/>
         </div>
         <div>
-          <label>paid</label>
+          <label>Paid</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='paid'
             ref={(input) => {_paid = input;}}/>
         </div>
         <div>
-          <label>sold</label>
-          <br/>
-          <input
-            type='text'
-            id='sold'
-            ref={(input) => {_sold = input;}}/>
-        </div>
-        <div>
-          <label>weight</label>
+          <label>Weight</label>
           <br/>
           <input
             type='text'
@@ -328,7 +366,7 @@ function NewGuitarForm(props) {
             id='guitarCase'
             ref={(input) => {_guitarCase = input;}}/>
         </div>
-        <button>+Guitar</button>
+        <button type='submit'>+Guitar</button>
       </form>
     </div>
   );

@@ -5,10 +5,8 @@ import Guitar from './Guitar';
 import './styles/List.css';
 
 function RecentGuitars(props) {
-  let recentGuitars = [];
-  for (var i = props.guitarsInCollection.length -1; i > props.guitarsInCollection.length - 4; i--) {
-    recentGuitars.push(props.guitarsInCollection[i]);
-  }
+  let recentGuitars = props.guitarsInCollection.slice(1).reverse();
+
   return(
     <div className="container">
       {recentGuitars.map((guitar) =>

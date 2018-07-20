@@ -19,7 +19,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => <Recent/>}/>
 
-          <Route exact path='/guitars' render={() => <GuitarCollection guitarsInCollection={this.state.guitarsInCollection}/>}/>
+          <Route exact path='/guitars' render={() => <GuitarCollection/>}/>
 
           <Route exact path='/amps' render={() => <AmpCollection ampsInCollection={this.state.ampsInCollection}/>}/>
 

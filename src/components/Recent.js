@@ -10,7 +10,7 @@ function Recent(props) {
     <div>
       <p>RECENT GUITARS:</p>
       <div className='container'>
-        <RecentGuitars guitarsInCollection={props.guitarsInCollection} />
+        <RecentGuitars />
       </div>
     <hr/>
       <p>RECENT AMPS:</p>
@@ -25,11 +25,5 @@ function Recent(props) {
     </div>
   );
 }
-
-Recent.propTypes = {
-  guitarsInCollection:PropTypes.array,
-  ampsInCollection:PropTypes.array,
-  pedalsInCollection:PropTypes.array,
-};
 
 export default Recent;

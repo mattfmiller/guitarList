@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import Guitar from './Guitar';
 import './styles/List.css';
@@ -21,8 +22,10 @@ function RecentGuitars(props) {
   );
 }
 
-RecentGuitars.propTypes = {
-  guitarsInCollection:PropTypes.array,
-};
+const mapStateToProps = state => {
+  return  {
+    guitarsInCollection: state.guitarsInCollection
+  }
+}
 
-export default RecentGuitars;
+export default connect(mapStateToProps)(RecentGuitars);

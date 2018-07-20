@@ -477,7 +477,7 @@ export const initialState = {
         pickguard: "5-Ply Black",
         controls: "Volume, Tone",
         guitarCase: "Gibson Hardcase",
-        id: 1,
+        id: 13,
         manufacturer: "Gibson",
         model: "Les Paul Custom",
         country: "USA",

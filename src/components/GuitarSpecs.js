@@ -11,6 +11,12 @@ function GuitarSpecs(props) {
     }
   });}
 
+  {props.guitarsInWishlist.forEach(function(guitar) {
+    if (guitar.id === parseInt(props.selectedGuitarId)) {
+      selectedGuitar = guitar;
+    }
+  });}
+
   let editPath = '/guitars/' + props.selectedGuitarId + '/edit'
 
   return(
@@ -24,7 +30,8 @@ function GuitarSpecs(props) {
 
 const mapStateToProps = state => {
   return  {
-    guitarsInCollection: state.guitarsInCollection
+    guitarsInCollection: state.guitarsInCollection,
+    guitarsInWishlist: state.guitarsInWishlist
   }
 }
 

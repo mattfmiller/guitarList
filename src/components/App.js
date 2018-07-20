@@ -21,9 +21,9 @@ class App extends Component {
 
           <Route exact path='/guitars' render={() => <GuitarCollection/>}/>
 
-          <Route exact path='/amps' render={() => <AmpCollection ampsInCollection={this.state.ampsInCollection}/>}/>
+          <Route exact path='/amps' render={() => <AmpCollection/>}/>
 
-          <Route exact path='/pedals' render={() => <PedalCollection pedalsInCollection={this.state.pedalsInCollection}/>}/>
+          <Route exact path='/pedals' render={() => <PedalCollection/>}/>
 
           <Route exact path = '/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId} />} />
 

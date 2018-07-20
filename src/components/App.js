@@ -7,6 +7,8 @@ import GuitarCollection from './GuitarCollection';
 import AmpCollection from './AmpCollection';
 import PedalCollection from './PedalCollection';
 import GuitarSpecs from './GuitarSpecs';
+import NewGuitarForm from './NewGuitarForm';
+import GuitarWishlist from './GuitarWishlist';
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +21,10 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => <Recent/>}/>
 
+          <Route exact path='/guitars/new' render={() => <NewGuitarForm/>}/>
+
+        <Route exact path='/guitars/wishlist' render={() => <GuitarWishlist/>}/>
+
           <Route exact path='/guitars' render={() => <GuitarCollection/>}/>
 
           <Route exact path='/amps' render={() => <AmpCollection/>}/>
@@ -26,6 +32,7 @@ class App extends Component {
           <Route exact path='/pedals' render={() => <PedalCollection/>}/>
 
           <Route exact path = '/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId} />} />
+
 
         </Switch>
       </div>

@@ -167,16 +167,16 @@ function NewGuitarForm(props) {
             id='neckWood'
             ref={(input) => {_neckWood = input;}}/>
         </div>
+        {/* <div>
+        //   <label>Neck Type</label>
+        //   <br/>
+        //   <select id ='wishlist' ref={(select) => {_neckType=select;}}>
+        //     <option value="Set">Set</option>
+        //     <option value="Bolt-On">Bolt-On</option>
+        //   </select>
+        // </div> */}
         <div>
           <label>Neck Type</label>
-          <br/>
-          <select id ='wishlist' ref={(select) => {_neckType=select;}}>
-            <option value="Set">Set</option>
-            <option value="Bolt-On">Bolt-On</option>
-          </select>
-        </div>
-        <div>
-          <label>neckType</label>
           <br/>
           <input
             type='text'

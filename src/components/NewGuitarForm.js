@@ -1,9 +1,6 @@
 import React from 'react';
 
 function NewGuitarForm(props) {
-  const f = false;
-  let t = true;
-
   let _manufacturer = null;
   let _model = null;
   let _wishlist = null;
@@ -58,8 +55,8 @@ function NewGuitarForm(props) {
           <label>Add to Collection or Wishlist?</label>
           <br/>
           <select id ='wishlist' ref={(select) => {_wishlist=select;}}>
-            <option value={f}>Collection</option>
-            <option value={t}>Wishlist</option>
+            <option value="false">Collection</option>
+            <option value="true">Wishlist</option>
           </select>
         </div>
         <div>
@@ -126,8 +123,10 @@ function NewGuitarForm(props) {
             id='weight'
             ref={(input) => {_weight = input;}}/>
         </div>
+        <h2>Body</h2>
+        <hr/>
         <div>
-          <label>bodyWood</label>
+          <label>Wood</label>
           <br/>
           <input
             type='text'
@@ -135,7 +134,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_bodyWood = input;}}/>
         </div>
         <div>
-          <label>finish</label>
+          <label>Finish</label>
           <br/>
           <input
             type='text'
@@ -143,7 +142,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_finish = input;}}/>
         </div>
         <div>
-          <label>color</label>
+          <label>Color</label>
           <br/>
           <input
             type='text'
@@ -151,20 +150,30 @@ function NewGuitarForm(props) {
             ref={(input) => {_color = input;}}/>
         </div>
         <div>
-          <label>binding</label>
+          <label>Binding</label>
           <br/>
           <input
             type='text'
             id='binding'
             ref={(input) => {_binding = input;}}/>
         </div>
+        <h2>Neck</h2>
+        <hr/>
         <div>
-          <label>neckWood</label>
+          <label>Wood</label>
           <br/>
           <input
             type='text'
             id='neckWood'
             ref={(input) => {_neckWood = input;}}/>
+        </div>
+        <div>
+          <label>Neck Type</label>
+          <br/>
+          <select id ='wishlist' ref={(select) => {_neckType=select;}}>
+            <option value="Set">Set</option>
+            <option value="Bolt-On">Bolt-On</option>
+          </select>
         </div>
         <div>
           <label>neckType</label>
@@ -175,7 +184,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_neckType = input;}}/>
         </div>
         <div>
-          <label>neckProfile</label>
+          <label>Neck Profile</label>
           <br/>
           <input
             type='text'
@@ -183,7 +192,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_neckProfile = input;}}/>
         </div>
         <div>
-          <label>fretboardWood</label>
+          <label>Fretboard Material</label>
           <br/>
           <input
             type='text'
@@ -191,23 +200,23 @@ function NewGuitarForm(props) {
             ref={(input) => {_fretboardWood = input;}}/>
         </div>
         <div>
-          <label>fretboardRadius</label>
+          <label>Fretboard Radius</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='fretboardRadius'
             ref={(input) => {_fretboardRadius = input;}}/>
         </div>
         <div>
-          <label>frets</label>
+          <label>Number of Frets</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='frets'
             ref={(input) => {_frets = input;}}/>
         </div>
         <div>
-          <label>fretMaterial</label>
+          <label>Fret Material</label>
           <br/>
           <input
             type='text'
@@ -215,7 +224,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_fretMaterial = input;}}/>
         </div>
         <div>
-          <label>inlays</label>
+          <label>Inlays</label>
           <br/>
           <input
             type='text'
@@ -223,7 +232,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_inlays = input;}}/>
         </div>
         <div>
-          <label>nutMaterial</label>
+          <label>Nut Material</label>
           <br/>
           <input
             type='text'
@@ -231,23 +240,25 @@ function NewGuitarForm(props) {
             ref={(input) => {_nutMaterial = input;}}/>
         </div>
         <div>
-          <label>nutWidth</label>
+          <label>Nut Width</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='nutWidth'
             ref={(input) => {_nutWidth = input;}}/>
         </div>
         <div>
-          <label>scaleLength</label>
+          <label>Scale Length</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='scaleLength'
             ref={(input) => {_scaleLength = input;}}/>
         </div>
+        <h2>Electronics</h2>
+        <hr/>
         <div>
-          <label>neckPickup</label>
+          <label>Neck Pickup</label>
           <br/>
           <input
             type='text'
@@ -255,7 +266,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_neckPickup = input;}}/>
         </div>
         <div>
-          <label>middlePickup</label>
+          <label>Middle Pickup</label>
           <br/>
           <input
             type='text'
@@ -263,7 +274,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_middlePickup = input;}}/>
         </div>
         <div>
-          <label>bridgePickup</label>
+          <label>Bridge Pickup</label>
           <br/>
           <input
             type='text'
@@ -271,7 +282,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_bridgePickup = input;}}/>
         </div>
         <div>
-          <label>volumePots</label>
+          <label>Volume Pot(s)</label>
           <br/>
           <input
             type='text'
@@ -279,7 +290,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_volumePots = input;}}/>
         </div>
         <div>
-          <label>tonePots</label>
+          <label>Tone Pot(s)</label>
           <br/>
           <input
             type='text'
@@ -287,7 +298,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_tonePots = input;}}/>
         </div>
         <div>
-          <label>capacitor</label>
+          <label>Capacitor</label>
           <br/>
           <input
             type='text'
@@ -295,7 +306,17 @@ function NewGuitarForm(props) {
             ref={(input) => {_capacitor = input;}}/>
         </div>
         <div>
-          <label>tuners</label>
+          <label>Controls</label>
+          <br/>
+          <input
+            type='text'
+            id='controls'
+            ref={(input) => {_controls = input;}}/>
+        </div>
+        <h2>Hardware</h2>
+        <hr/>
+        <div>
+          <label>Tunering Machines</label>
           <br/>
           <input
             type='text'
@@ -303,7 +324,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_tuners = input;}}/>
         </div>
         <div>
-          <label>tunerButtons</label>
+          <label>Tuner Buttons</label>
           <br/>
           <input
             type='text'
@@ -311,7 +332,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_tunerButtons = input;}}/>
         </div>
         <div>
-          <label>bridge</label>
+          <label>Bridge</label>
           <br/>
           <input
             type='text'
@@ -319,7 +340,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_bridge = input;}}/>
         </div>
         <div>
-          <label>tailpiece</label>
+          <label>Tailpiece</label>
           <br/>
           <input
             type='text'
@@ -327,7 +348,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_tailpiece = input;}}/>
         </div>
         <div>
-          <label>guitarSwitch</label>
+          <label>Switch</label>
           <br/>
           <input
             type='text'
@@ -335,7 +356,7 @@ function NewGuitarForm(props) {
             ref={(input) => {_guitarSwitch = input;}}/>
         </div>
         <div>
-          <label>knobs</label>
+          <label>Knobs</label>
           <br/>
           <input
             type='text'
@@ -343,29 +364,24 @@ function NewGuitarForm(props) {
             ref={(input) => {_knobs = input;}}/>
         </div>
         <div>
-          <label>pickguard</label>
+          <label>Pickguard</label>
           <br/>
           <input
             type='text'
             id='pickguard'
             ref={(input) => {_pickguard = input;}}/>
         </div>
+        <h2>Accessories</h2>
+        <hr/>
         <div>
-          <label>controls</label>
-          <br/>
-          <input
-            type='text'
-            id='controls'
-            ref={(input) => {_controls = input;}}/>
-        </div>
-        <div>
-          <label>guitarCase</label>
+          <label>Guitar Case</label>
           <br/>
           <input
             type='text'
             id='guitarCase'
             ref={(input) => {_guitarCase = input;}}/>
         </div>
+        <br/>
         <button type='submit'>+Guitar</button>
       </form>
     </div>

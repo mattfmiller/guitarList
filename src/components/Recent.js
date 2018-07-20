@@ -15,12 +15,12 @@ function Recent(props) {
     <hr/>
       <p>RECENT AMPS:</p>
       <div className='container'>
-        <RecentAmps ampsInCollection={props.ampsInCollection} />
+        <RecentAmps />
       </div>
       <hr/>
         <p>RECENT PEDALS:</p>
         <div className='container'>
-          <RecentPedals pedlasInCollection={props.pedlasInCollection} />
+          <RecentPedals />
         </div>
     </div>
   );

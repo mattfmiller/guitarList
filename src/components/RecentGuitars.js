@@ -5,7 +5,7 @@ import Guitar from './Guitar';
 import './styles/List.css';
 
 function RecentGuitars(props) {
-  let recentGuitars = props.guitarsInCollection.slice(1).reverse();
+  let recentGuitars = props.guitarsInCollection.slice(-3).reverse();
 
   return(
     <div className="container">

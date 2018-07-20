@@ -5,10 +5,7 @@ import Pedal from './Pedal';
 import './styles/List.css';
 
 function RecentPedals(props) {
-  let recentPedals = [];
-  for (var i = props.pedalsInCollection.length -1; i > props.pedalsInCollection.length - 4; i--) {
-    recentPedals.push(props.pedalsInCollection[i]);
-  }
+  let recentPedals = props.pedalsInCollection.slice(-3).reverse();
   return(
     <div className="container">
       {recentPedals.map((pedal) =>

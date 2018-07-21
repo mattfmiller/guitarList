@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 function EditGuitarForm(props) {
-
   let selectedGuitar;
+  
   {props.guitarsInCollection.forEach(function(guitar) {
     if (guitar.id === parseInt(props.selectedGuitarId)) {
       selectedGuitar = guitar;

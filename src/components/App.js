@@ -16,6 +16,8 @@ import PedalSpecs from './PedalSpecs';
 import NewPedalForm from './NewPedalForm';
 import PedalWishlist from './PedalWishlist';
 import EditGuitarForm from './EditGuitarForm';
+import EditAmpForm from './EditAmpForm';
+import EditPedalForm from './EditPedalForm';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +55,10 @@ class App extends Component {
           <Route exact path = '/pedals/:pedalId' render={(props)=><PedalSpecs path={props} selectedPedalId={props.match.params.pedalId}/>}/>
 
         <Route exact path = '/guitars/:guitarId/edit' render={(props)=><EditGuitarForm path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
+
+        <Route exact path = '/amps/:ampId/edit' render={(props)=><EditAmpForm path={props} selectedAmpId={props.match.params.ampId}/>}/>
+
+        <Route exact path = '/pedals/:pedalId/edit' render={(props)=><EditPedalForm path={props} selectedPedalId={props.match.params.pedalId}/>}/>
 
         </Switch>
       </div>

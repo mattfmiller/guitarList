@@ -528,7 +528,7 @@ export const initialState = {
       weight: 45.7,
       imageUrl: "https://media.sweetwater.com/api/i/q-82__ha-7c2b7cd6e86396e3__hmac-c08058d55adce5256f59acaa5d50cc559a7db0bc/images/items/750/57BandMaster-large.jpg",
       current: true,
-      wishlist: false,
+      wishlist: true,
       paid: 1500,
       sold: 0
     }
@@ -556,7 +556,7 @@ export const initialState = {
       weight: 34,
       imageUrl: "https://sc1.musik-produktiv.com/pic-010082870xl/wampler-tumnus.jpg",
       current: true,
-      wishlist: false,
+      wishlist: true,
       paid: 125,
       sold: 0
     }

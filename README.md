@@ -25,14 +25,11 @@
 
 Stretch goals:<br>
 
+   * Add notes to instrument<br>
+   * Add guitar type to guitars<br>
    * Filter inventory by type<br>
    * Search inventory by query<br>
    * Create multiple accounts<br>
-
-## Relevant Repositories
-
-* Custom Java API: https://github.com/mattfmiller/equiplist
-
 
 #### User Story
 
@@ -66,6 +63,11 @@ Landing Page:
 
 Instrument Details:
 ![alt tag](src/assets/images/guitarList-instrument-details.jpg "Landing Page")
+
+## Relevant Repositories
+
+* Custom Java API: https://github.com/mattfmiller/equiplist
+
 
 ## Known Bugs
 

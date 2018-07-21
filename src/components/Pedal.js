@@ -5,7 +5,6 @@ import './styles/Instrument.css';
 
 function Pedal(props) {
   let linkPath = '/pedals/' + props.id;
-  console.log(linkPath);
   return(
     <Link style={{textDecoration: 'none', color: 'black'}} to={linkPath}><div className='instrument'>
       <img src={props.imageUrl}/>

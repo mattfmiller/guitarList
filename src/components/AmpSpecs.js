@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 
 function AmpSpecs(props) {
+  let optionalContent;
   let selectedAmp;
   {props.ampsInCollection.forEach(function(amp) {
     if (amp.id === parseInt(props.selectedAmpId)) {
@@ -17,12 +18,24 @@ function AmpSpecs(props) {
     }
   });}
 
-  let editPath = '/amps/' + props.selectedAmpId + '/edit'
+  let editPath = '/amps/' + props.selectedAmpId + '/edit';
+
+  if (selectedAmp.wishlist) {
+    optionalContent = <div>
+      <h2>{selectedAmp.manufacturer} - {selectedAmp.model}</h2>
+      <img src={selectedAmp.imageUrl}/>
+    </div>
+  } else {
+    optionalContent = <div>
+      <h2>{selectedAmp.manufacturer} - {selectedAmp.model}</h2>
+      <img src={selectedAmp.imageUrl}/>
+      <p>${selectedAmp.paid}</p>
+    </div>
+  }
 
   return(
     <div>
-      <h1> {selectedAmp.manufacturer} - {selectedAmp.model}</h1>
-      <img src={selectedAmp.imageUrl}/>
+      {optionalContent}
       <Link to={editPath}><p>Edit</p></Link>
     </div>
   );

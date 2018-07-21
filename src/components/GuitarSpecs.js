@@ -18,7 +18,7 @@ function GuitarSpecs(props) {
     }
   });}
 
-  let editPath = '/guitars/' + props.selectedGuitarId + '/edit'
+  let editPath = '/guitars/' + props.selectedGuitarId + '/edit';
 
 if (selectedGuitar.wishlist) {
   optionalContent = <div>
@@ -32,6 +32,7 @@ if (selectedGuitar.wishlist) {
     <p>${selectedGuitar.paid}</p>
   </div>
 }
+
   return(
     <div>
       {optionalContent}

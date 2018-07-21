@@ -65,7 +65,7 @@ function EditGuitarForm(props) {
 
   return(
     <div>
-      Edit Guitar:
+      <h2>Edit {selectedGuitar.manufacturer} {selectedGuitar.model}:</h2>
       <form onSubmit={handleClick}>
         <div>
           <label>Add to Collection or Wishlist?</label>
@@ -354,7 +354,7 @@ function EditGuitarForm(props) {
         <h2>Hardware</h2>
         <hr/>
         <div>
-          <label>Tunering Machines</label>
+          <label>Tuning Machines</label>
           <br/>
           <input
             type='text'

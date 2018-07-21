@@ -309,7 +309,7 @@ function NewGuitarForm(props) {
         <h2>Hardware</h2>
         <hr/>
         <div>
-          <label>Tunering Machines</label>
+          <label>Tuning Machines</label>
           <br/>
           <input
             type='text'

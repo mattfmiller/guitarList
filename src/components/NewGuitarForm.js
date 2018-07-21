@@ -3,6 +3,7 @@ import React from 'react';
 function NewGuitarForm(props) {
   let _manufacturer = null;
   let _model = null;
+  let _collection = null;
   let _wishlist = null;
   let _country = null;
   let _serialNumber = null;
@@ -119,7 +120,7 @@ function NewGuitarForm(props) {
           <label>Weight</label>
           <br/>
           <input
-            type='text'
+            type='number'
             id='weight'
             ref={(input) => {_weight = input;}}/>
         </div>

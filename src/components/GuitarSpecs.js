@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 
 function GuitarSpecs(props) {
+  let optionalContent;
   let selectedGuitar;
   {props.guitarsInCollection.forEach(function(guitar) {
     if (guitar.id === parseInt(props.selectedGuitarId)) {
@@ -19,10 +20,21 @@ function GuitarSpecs(props) {
 
   let editPath = '/guitars/' + props.selectedGuitarId + '/edit'
 
+if (selectedGuitar.wishlist) {
+  optionalContent = <div>
+    <h2>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h2>
+    <img src={selectedGuitar.imageUrl}/>
+  </div>
+} else {
+  optionalContent = <div>
+    <h2>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h2>
+    <img src={selectedGuitar.imageUrl}/>
+    <p>${selectedGuitar.paid}</p>
+  </div>
+}
   return(
     <div>
-      <h1> {selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
-      <img src={selectedGuitar.imageUrl}/>
+      {optionalContent}
       <Link to={editPath}><p>Edit</p></Link>
     </div>
   );

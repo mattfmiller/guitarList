@@ -49,7 +49,7 @@ function NewGuitarForm(props) {
 
   return(
     <div>
-      <h2>Add A New Guitar Form</h2>
+      <h2>Add A New Guitar</h2>
       <form onSubmit={handleClick}>
         <div>
           <label>Add to Collection or Wishlist?</label>
@@ -167,14 +167,6 @@ function NewGuitarForm(props) {
             id='neckWood'
             ref={(input) => {_neckWood = input;}}/>
         </div>
-        {/* <div>
-        //   <label>Neck Type</label>
-        //   <br/>
-        //   <select id ='wishlist' ref={(select) => {_neckType=select;}}>
-        //     <option value="Set">Set</option>
-        //     <option value="Bolt-On">Bolt-On</option>
-        //   </select>
-        // </div> */}
         <div>
           <label>Neck Type</label>
           <br/>

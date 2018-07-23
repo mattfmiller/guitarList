@@ -22,6 +22,7 @@ function EditAmpForm(props) {
   let _wishlist = null;
   let _country = null;
   let _serialNumber = null;
+  let _description = null;
   let _year = null;
   let _imageUrl = null;
   let _paid = null;
@@ -101,6 +102,15 @@ function EditAmpForm(props) {
             id='serialNumber'
             defaultValue={selectedAmp.serialNumber}
             ref={(input) => {_serialNumber = input;}}/>
+        </div>
+        <div>
+          <label>Description</label>
+          <br/>
+          <textarea
+            type='text'
+            id='description'
+            defaultValue={selectedAmp.description}
+            ref={(input) => {_description = input;}}></textarea>
         </div>
         <div>
           <label>Year</label>

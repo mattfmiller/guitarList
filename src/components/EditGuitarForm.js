@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 function EditGuitarForm(props) {
   let selectedGuitar;
-  
+
   {props.guitarsInCollection.forEach(function(guitar) {
     if (guitar.id === parseInt(props.selectedGuitarId)) {
       selectedGuitar = guitar;
@@ -22,6 +22,7 @@ function EditGuitarForm(props) {
   let _wishlist = null;
   let _country = null;
   let _serialNumber = null;
+  let _description = null;
   let _year = null;
   let _imageUrl = null;
   let _paid = null;
@@ -110,6 +111,15 @@ function EditGuitarForm(props) {
             id='serialNumber'
             defaultValue={selectedGuitar.serialNumber}
             ref={(input) => {_serialNumber = input;}}/>
+        </div>
+        <div>
+          <label>Description</label>
+          <br/>
+          <textarea
+            type='text'
+            id='description'
+            defaultValue={selectedGuitar.description}
+            ref={(input) => {_description = input;}}></textarea>
         </div>
         <div>
           <label>Year</label>

@@ -20,9 +20,7 @@ function NewAmpForm(props) {
   let _height = null;
   let _electronics = null;
   let _speakers = null;
-  let _powerTubes = null;
-  let _preAmpTubes = null;
-  let _rectifierTube = null;
+  let _tubes = null;
   let _reverb = null;
   let _tremolo = null;
   let _externalSpeaker = null;
@@ -182,44 +180,28 @@ function NewAmpForm(props) {
             ref={(input) => {_speakers = input;}}/>
         </div>
         <div>
-          <label>powerTubes</label>
+          <label>Tubes</label>
           <br/>
           <input
             type='text'
-            id='powerTubes'
-            ref={(input) => {_powerTubes = input;}}/>
-        </div>
-        <div>
-          <label>preAmpTubes</label>
-          <br/>
-          <input
-            type='text'
-            id='preAmpTubes'
-            ref={(input) => {_preAmpTubes = input;}}/>
-        </div>
-        <div>
-          <label>rectifierTube</label>
-          <br/>
-          <input
-            type='text'
-            id='rectifierTube'
-            ref={(input) => {_rectifierTube = input;}}/>
+            id='tubes'
+            ref={(input) => {_tubes = input;}}/>
         </div>
         <div>
           <label>Reverb</label>
           <br/>
-          <select id ='reverb' ref={(select) => {_reverb=select;}}>
-            <option value="false">No Onboard Reverb</option>
-            <option value="true">Onboard Reverb</option>
-          </select>
+            <input
+              type='text'
+              id='reverb'
+              ref={(input) => {_reverb = input;}}/>
         </div>
         <div>
           <label>Tremolo</label>
           <br/>
-          <select id ='tremolo' ref={(select) => {_tremolo=select;}}>
-            <option value="false">No Onboard Tremolo</option>
-            <option value="true">Onboard Tremolo</option>
-          </select>
+            <input
+              type='text'
+              id='tremolo'
+              ref={(input) => {_tremolo = input;}}/>
         </div>
         <div>
           <label>externalSpeaker</label>
@@ -272,10 +254,10 @@ function NewAmpForm(props) {
         <div>
           <label>Tilt Legs</label>
           <br/>
-          <select id ='tiltLegs' ref={(select) => {_tiltLegs=select;}}>
-            <option value="false">No Tilt Legs</option>
-            <option value="true">Tilt Legs</option>
-          </select>
+            <input
+              type='text'
+              id='tiltLegs'
+              ref={(input) => {_tiltLegs = input;}}/>
         </div>
         <div>
           <label>feet</label>

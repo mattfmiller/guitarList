@@ -18,11 +18,19 @@ import PedalWishlist from './PedalWishlist';
 import EditGuitarForm from './EditGuitarForm';
 import EditAmpForm from './EditAmpForm';
 import EditPedalForm from './EditPedalForm';
+import { connect } from 'react-redux';
+import PropTypes from "prop-types";
+import {fetchGuitarsInCollection} from './../actions';
 
 class App extends Component {
   constructor(props) {
     super(props);
   }
+
+componentDidMount() {
+  this.props.dispatch(fetchGuitarsInCollection());
+};
+
   render() {
     return (
       <div className="App">
@@ -50,4 +58,8 @@ class App extends Component {
   }
 }
 
-export default App;
+// App.propTypes = {
+//   dispatch: PropTypes.func
+// };
+
+export default connect()(App);

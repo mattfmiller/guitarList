@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import './styles/App.css';
 import Header from './Header';
 import Recent from './Recent';
@@ -31,6 +31,7 @@ componentDidMount() {
 };
 
   render() {
+    // console.log(this.props.location);
     return (
       <div className="App">
         <Header />
@@ -58,4 +59,4 @@ componentDidMount() {
 }
 
 
-export default connect()(App);
+export default withRouter(connect()(App));

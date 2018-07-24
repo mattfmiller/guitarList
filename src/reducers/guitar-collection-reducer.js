@@ -18,8 +18,8 @@ const guitarCollectionReducer = (state = initialState, action) => {
       isFetchingGuitarsInCollection: false,
       guitarsInCollection: action.json,
     };
-    console.log("Hi!");
     newState = Object.assign({}, state, newGuitarsInCollectionSlice);
+    console.log(newState);
     return newState;
 
     default:

@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 
 function GuitarSpecs(props) {
-  console.log(props.guitarsInCollection);
   let optionalContent;
   let selectedGuitar;
+  if (props.guitarsInCollection.length === 0) return (<h1>loading...</h1>);
+
   {props.guitarsInCollection.forEach(function(guitar) {
     if (guitar.id === parseInt(props.selectedGuitarId)) {
       selectedGuitar = guitar;

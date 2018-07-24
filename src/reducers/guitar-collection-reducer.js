@@ -9,6 +9,7 @@ const guitarCollectionReducer = (state = initialState, action) => {
     const newStateSliceEntry = {
       isFetchingGuitarsInCollection: true
     };
+    console.log("Hey!");
     newState = Object.assign({}, state, newStateSliceEntry);
     return newState;
 
@@ -16,7 +17,8 @@ const guitarCollectionReducer = (state = initialState, action) => {
     const newGuitarsInCollectionSlice = {
       isFetchingGuitarsInCollection: false,
       guitarsInCollection: action.json,
-    }
+    };
+    console.log("Hi!");
     newState = Object.assign({}, state, newGuitarsInCollectionSlice);
     return newState;
 

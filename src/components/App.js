@@ -19,7 +19,6 @@ import EditGuitarForm from './EditGuitarForm';
 import EditAmpForm from './EditAmpForm';
 import EditPedalForm from './EditPedalForm';
 import { connect } from 'react-redux';
-import PropTypes from "prop-types";
 import {fetchGuitarsInCollection} from './../actions';
 
 class App extends Component {
@@ -58,8 +57,5 @@ componentDidMount() {
   }
 }
 
-// App.propTypes = {
-//   dispatch: PropTypes.func
-// };
 
 export default connect()(App);

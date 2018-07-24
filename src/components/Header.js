@@ -15,7 +15,7 @@ function Header() {
           <h1 className="App-title">guitarList</h1>
         </div></Link>
         <div>
-          <img src={guitarIcon} className="instrument-logo" />
+          <img src={guitarIcon} alt="icon" className="instrument-logo" />
           <ul>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars'><li>GUITAR COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/wishlist'><li>GUITAR WISHLIST</li></Link>
@@ -23,7 +23,7 @@ function Header() {
           </ul>
         </div>
         <div>
-          <img src={ampIcon} className="instrument-logo" />
+          <img src={ampIcon} alt="icon" className="instrument-logo" />
           <ul>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/amps'><li>AMP COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/wishlist'><li>AMP WISHLIST</li></Link>
@@ -31,7 +31,7 @@ function Header() {
           </ul>
         </div>
         <div>
-          <img src={pedalIcon} className="instrument-logo" />
+          <img src={pedalIcon} alt="icon" className="instrument-logo" />
           <ul>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals'><li>PEDAL COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/wishlist'><li>PEDAL WISHLIST</li></Link>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import {fetchEditPedal} from './../actions';
 
 function EditPedalForm(props) {
   let selectedPedal;
@@ -43,7 +44,33 @@ function EditPedalForm(props) {
 
   function handleClick(event) {
     event.preventDefault();
-    console.log({wishlist: JSON.parse(_wishlist.value), manufacturer: _manufacturer.value});
+    let body = {
+      'manufacturer': _manufacturer.value,
+      'model': _model.value,
+      'current': true,
+      'wishlist': _wishlist.value,
+      'country': _country.value,
+      'serialNumber': _serialNumber.value,
+      'description': _description.value,
+      'year': _year.value,
+      'imageUrl': _imageUrl.value,
+      'paid': _paid.value,
+      'sold': 0,
+      'weight': _weight.value,
+      'type': _type.value,
+      'power': _power.value,
+      'width': _width.value,
+      'depth': _depth.value,
+      'height': _height.value,
+      'electronics': _electronics.value,
+      'trueBypass': _trueBypass.value,
+      'inputImpedance': _inputImpedance.value,
+      'outputImpedance': _outputImpedance.value,
+      'currentDraw': _currentDraw.value,
+      'controls': _controls.value,
+      'features': _features.value,
+    }
+    props.dispatch(fetchEditPedal(body, selectedPedal.id));
   }
 
   return(

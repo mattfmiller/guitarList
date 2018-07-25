@@ -95,16 +95,6 @@ function NewGuitarForm(props) {
       'controls': _controls.value,
       'guitarCase': _guitarCase.value
     }
-    // fetch('https://equiplist.herokuapp.com/guitars/new', {
-    //   method: 'POST',
-    //   headers: {'Content-Type':'application/json'},
-    //   body: JSON.stringify(body)
-    // }).then(function(data) {
-    //   console.log('Request success: ', data);
-    // }).catch(function (error) {
-    //   console.log('Request failure: ', error);
-    // });
-    // this.props.history.push('/guitars');
     props.dispatch(fetchNewGuitar(body));
   }
 

@@ -157,3 +157,19 @@ export function fetchNewAmp(body) {
     });
   };
 }
+
+export function fetchNewPedal(body) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/pedals/new', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchPedalsInCollection();
+      window.location.replace('http://localhost:3000/pedals');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

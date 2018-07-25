@@ -5,6 +5,7 @@ import Pedal from './Pedal';
 import './styles/List.css';
 
 function PedalCollection(props) {
+  if (props.pedalsInCollection.length === 0) return (<h3>Hmmm, can't seem find any pedals in the collection...</h3>);
   return(
     <div className="container">
       {props.pedalsInCollection.map((pedal) =>

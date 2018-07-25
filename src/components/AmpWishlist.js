@@ -5,6 +5,7 @@ import Amp from './Amp';
 import './styles/List.css';
 
 function AmpWishlist(props) {
+  if (props.ampsInWishlist.length === 0) return (<h3>Hmmm, can't seem to find any amps in the wishlist...</h3>);
   return(
     <div className="container">
       {props.ampsInWishlist.map((amp) =>

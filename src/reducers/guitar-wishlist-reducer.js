@@ -6,24 +6,14 @@ const guitarWishlistReducer = (state = initialState.guitarsInWishlist, action) =
   switch (action.type) {
 
     case types.REQUEST_GUITARS_IN_WISHLIST:
-    // const newStateSliceEntry = {
-    //   isFetchingGuitarsInWishlist: true
-    // };
-    // newState = Object.assign({}, state, newStateSliceEntry);
-    // return newState;
-    return {
-      isFetchingGuitarsInWishlist: true
-    };
+    return state;
 
     case types.RECEIVE_GUITARS_IN_WISHLIST:
-    // const newGuitarsInWishlistSlice = {
-    //   isFetchingGuitarsInWishlist: false,
-    //   guitarsInWishlist: action.json,
-    // };
-    // newState = Object.assign({}, state, newGuitarsInWishlistSlice);
-    // console.log(newState);
-    // return newState;
-    return action.json;
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
 
     default:
     return state

@@ -6,24 +6,14 @@ const pedalWishlistReducer = (state = initialState.pedalsInWishlist, action) => 
   switch (action.type) {
 
     case types.REQUEST_PEDALS_IN_WISHLIST:
-    // const newStateSliceEntry = {
-    //   isFetchingPedalsInWishlist: true
-    // };
-    // newState = Object.assign({}, state, newStateSliceEntry);
-    // return newState;
-    return {
-      isFetchingPedalsInWishlist: true
-    };
+    return state;
 
     case types.RECEIVE_PEDALS_IN_WISHLIST:
-    // const newPedalsInWishlistSlice = {
-    //   isFetchingPedalsInWishlist: false,
-    //   pedalsInWishlist: action.json,
-    // };
-    // newState = Object.assign({}, state, newPedalsInWishlistSlice);
-    // console.log(newState);
-    // return newState;
-    return action.json;
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
 
     default:
     return state

@@ -6,24 +6,14 @@ const ampWishlistReducer = (state = initialState.ampsInWishlist, action) => {
   switch (action.type) {
 
     case types.REQUEST_AMPS_IN_WISHLIST:
-    // const newStateSliceEntry = {
-    //   isFetchingAmpsInWishlist: true
-    // };
-    // newState = Object.assign({}, state, newStateSliceEntry);
-    // return newState;
-    return {
-      isFetchingAmpsInWishlist: true
-    };
+    return state;
 
     case types.RECEIVE_AMPS_IN_WISHLIST:
-    // const newAmpsInWishlistSlice = {
-    //   isFetchingAmpsInWishlist: false,
-    //   ampsInWishlist: action.json,
-    // };
-    // newState = Object.assign({}, state, newAmpsInWishlistSlice);
-    // console.log(newState);
-    // return newState;
-    return action.json;
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
 
     default:
     return state

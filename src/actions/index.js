@@ -61,7 +61,6 @@ export function fetchGuitarsInCollection() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receiveGuitarsInCollection(json));
     });
   };
@@ -74,7 +73,6 @@ export function fetchGuitarsInWishlist() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receiveGuitarsInWishlist(json));
     });
   };
@@ -87,7 +85,6 @@ export function fetchAmpsInCollection() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receiveAmpsInCollection(json));
     });
   };
@@ -100,7 +97,6 @@ export function fetchAmpsInWishlist() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receiveAmpsInWishlist(json));
     });
   };
@@ -113,7 +109,6 @@ export function fetchPedalsInCollection() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receivePedalsInCollection(json));
     });
   };
@@ -126,7 +121,6 @@ export function fetchPedalsInWishlist() {
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {
-      console.log('CHECK OUT THIS SWEET API RESPONSE:', json);
       dispatch(receivePedalsInWishlist(json));
     });
   };

@@ -6,11 +6,6 @@ const guitarCollectionReducer = (state = initialState.guitarsInCollection, actio
   switch (action.type) {
 
     case types.REQUEST_GUITARS_IN_COLLECTION:
-    // const newStateSliceEntry = {
-    //   isFetchingGuitarsInCollection: true
-    // };
-    // newState = Object.assign({}, state, newStateSliceEntry);
-    // return newState;
     return state;
 
     case types.RECEIVE_GUITARS_IN_COLLECTION:
@@ -19,13 +14,6 @@ const guitarCollectionReducer = (state = initialState.guitarsInCollection, actio
     } else {
       return action.json;
     }
-    // const newGuitarsInCollectionSlice = {
-    //   isFetchingGuitarsInCollection: false,
-    //   action.json
-    // };
-    // newState = Object.assign({}, state, newGuitarsInCollectionSlice);
-    // console.log(newState);
-    // return newState;
 
     default:
     return state;

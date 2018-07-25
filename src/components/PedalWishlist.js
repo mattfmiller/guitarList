@@ -5,6 +5,7 @@ import Pedal from './Pedal';
 import './styles/List.css';
 
 function PedalWishlist(props) {
+  if (props.pedalsInWishlist.length === 0) return (<h3>Hmmm, can't seem to find any pedals in the wishlist...</h3>);
   return(
     <div className="container">
       {props.pedalsInWishlist.map((pedal) =>

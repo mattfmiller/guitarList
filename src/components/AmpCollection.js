@@ -5,6 +5,7 @@ import Amp from './Amp';
 import './styles/List.css';
 
 function AmpCollection(props) {
+  if (props.ampsInCollection.length === 0) return (<h3>Hmmm, can't seem find any amps in the collection...</h3>);
   return(
     <div className="container">
       {props.ampsInCollection.map((amp) =>

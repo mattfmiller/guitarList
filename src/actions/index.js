@@ -64,6 +64,26 @@ export const receiveGuitarsBySearch = (json, queryTerm) => ({
   queryTerm
 });
 
+export const requestAmpsBySearch = () => ({
+  type: types.REQUEST_AMPS_BY_SEARCH
+});
+
+export const receiveAmpsBySearch = (json, queryTerm) => ({
+  type: types.RECEIVE_AMPS_BY_SEARCH,
+  json,
+  queryTerm
+});
+
+export const requestPedalsBySearch = () => ({
+  type: types.REQUEST_PEDALS_BY_SEARCH
+});
+
+export const receivePedalsBySearch = (json, queryTerm) => ({
+  type: types.RECEIVE_PEDALS_BY_SEARCH,
+  json,
+  queryTerm
+});
+
 export function fetchGuitarsInCollection() {
   return function (dispatch) {
     dispatch(requestGuitarsInCollection());
@@ -241,6 +261,32 @@ export function fetchGuitarsBySearch(queryTerm) {
       error => console.log('An error occurred.', error)
     ).then(function(json) {
       dispatch(receiveGuitarsBySearch(json, queryTerm));
+    });
+  };
+}
+
+export function fetchAmpsBySearch(queryTerm) {
+  return function (dispatch) {
+    dispatch(requestAmpsBySearch());
+    queryTerm = queryTerm.replace(' ', '_');
+    return fetch('https://equiplist.herokuapp.com/amps?query=' + queryTerm).then(
+      response => response.json(),
+      error => console.log('An error occurred.', error)
+    ).then(function(json) {
+      dispatch(receiveAmpsBySearch(json, queryTerm));
+    });
+  };
+}
+
+export function fetchPedalsBySearch(queryTerm) {
+  return function (dispatch) {
+    dispatch(requestPedalsBySearch());
+    queryTerm = queryTerm.replace(' ', '_');
+    return fetch('https://equiplist.herokuapp.com/pedals?query=' + queryTerm).then(
+      response => response.json(),
+      error => console.log('An error occurred.', error)
+    ).then(function(json) {
+      dispatch(receivePedalsBySearch(json, queryTerm));
     });
   };
 }

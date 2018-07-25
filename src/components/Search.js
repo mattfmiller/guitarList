@@ -6,6 +6,8 @@ import SearchPedals from './SearchPedals';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 import {fetchGuitarsBySearch} from './../actions';
+import {fetchAmpsBySearch} from './../actions';
+import {fetchPedalsBySearch} from './../actions';
 
 class Search extends Component {
   constructor(props) {
@@ -17,8 +19,9 @@ class Search extends Component {
     let values = queryString.parse(this.props.currentRouterPath);
     let queryTerm = values.query;
     this.props.dispatch(fetchGuitarsBySearch(queryTerm));
+    this.props.dispatch(fetchAmpsBySearch(queryTerm));
+    this.props.dispatch(fetchPedalsBySearch(queryTerm));
   };
-
 
   render() {
     return(

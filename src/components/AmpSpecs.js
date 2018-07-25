@@ -6,6 +6,9 @@ import PropTypes from "prop-types";
 function AmpSpecs(props) {
   let optionalContent;
   let selectedAmp;
+
+  if (props.ampsInCollection.length === 0) return (<h1>loading...</h1>);
+
   {props.ampsInCollection.forEach(function(amp) {
     if (amp.id === parseInt(props.selectedAmpId)) {
       selectedAmp = amp;

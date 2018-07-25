@@ -14,6 +14,11 @@ const guitarCollectionReducer = (state = initialState.guitarsInCollection, actio
     return state;
 
     case types.RECEIVE_GUITARS_IN_COLLECTION:
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
     // const newGuitarsInCollectionSlice = {
     //   isFetchingGuitarsInCollection: false,
     //   action.json
@@ -21,7 +26,6 @@ const guitarCollectionReducer = (state = initialState.guitarsInCollection, actio
     // newState = Object.assign({}, state, newGuitarsInCollectionSlice);
     // console.log(newState);
     // return newState;
-    return action.json;
 
     default:
     return state;

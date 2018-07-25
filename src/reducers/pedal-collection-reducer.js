@@ -14,6 +14,11 @@ const pedalCollectionReducer = (state = initialState.pedalsInCollection, action)
     return state;
 
     case types.RECEIVE_PEDALS_IN_COLLECTION:
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
     // const newPedalsInCollectionSlice = {
     //   isFetchingPedalsInCollection: false,
     //   action.json
@@ -21,7 +26,7 @@ const pedalCollectionReducer = (state = initialState.pedalsInCollection, action)
     // newState = Object.assign({}, state, newPedalsInCollectionSlice);
     // console.log(newState);
     // return newState;
-    return action.json;
+    // return action.json;
 
     default:
     return state

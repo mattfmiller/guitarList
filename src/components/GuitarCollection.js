@@ -7,8 +7,6 @@ import './styles/List.css';
 function GuitarCollection(props) {
   console.log(props.guitarsInCollection);
   // if (props.guitarsInCollection === undefined) return (<h1>loading...</h1>);
-  if (props.guitarsInCollection.message === undefined) {
-    console.log(1);
     // return (
     //   <div className="container">
     //     {props.guitarsInCollection.map((guitar) =>
@@ -20,13 +18,12 @@ function GuitarCollection(props) {
     //     )}
     //   </div>
     // );
-  } else {
-    console.log(2);
-    // return (
-    //   <div className="container">
-    //   </div>
-    // );
-  }
+  // } else {
+    return (
+      <div className="container">
+      </div>
+    );
+  // }
 }
 
 const mapStateToProps = state => {

@@ -6,6 +6,9 @@ import PropTypes from "prop-types";
 function PedalSpecs(props) {
   let optionalContent;
   let selectedPedal;
+
+  if (props.pedalsInCollection.length === 0) return (<h1>loading...</h1>);
+
   {props.pedalsInCollection.forEach(function(pedal) {
     if (pedal.id === parseInt(props.selectedPedalId)) {
       selectedPedal = pedal;

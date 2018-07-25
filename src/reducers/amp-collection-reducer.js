@@ -14,6 +14,11 @@ const ampCollectionReducer = (state = initialState.ampsInCollection, action) => 
     return state;
 
     case types.RECEIVE_AMPS_IN_COLLECTION:
+    if (action.json.message) {
+      return state;
+    } else {
+      return action.json;
+    }
     // const newAmpsInCollectionSlice = {
     //   isFetchingAmpsInCollection: false,
     //   action.json
@@ -21,7 +26,7 @@ const ampCollectionReducer = (state = initialState.ampsInCollection, action) => 
     // newState = Object.assign({}, state, newAmpsInCollectionSlice);
     // console.log(newState);
     // return newState;
-    return action.json;
+    // return action.json;
 
     default:
     return state

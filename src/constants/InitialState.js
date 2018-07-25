@@ -4,7 +4,10 @@ export const initialState = {
   pedalsInCollection: [],
   guitarsInWishlist: [],
   ampsInWishlist: [],
-  pedalsInWishlist: []
+  pedalsInWishlist: [],
+  guitarsReturnedFromSearch: [],
+  ampsReturnedFromSearch: [],
+  pedalsReturnedFromSearch: []
   // guitarsInCollection: [
   //   {
   //       bodyWood: "Mahogany",

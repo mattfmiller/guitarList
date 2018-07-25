@@ -54,6 +54,16 @@ export const receivePedalsInWishlist = (json) => ({
   json
 });
 
+export const requestGuitarsBySearch = () => ({
+  type: types.REQUEST_GUITARS_BY_SEARCH
+});
+
+export const receiveGuitarsBySearch = (json, queryTerm) => ({
+  type: types.RECEIVE_GUITARS_BY_SEARCH,
+  json,
+  queryTerm
+});
+
 export function fetchGuitarsInCollection() {
   return function (dispatch) {
     dispatch(requestGuitarsInCollection());
@@ -218,6 +228,18 @@ export function fetchEditPedal(body, id) {
       window.location.replace('http://localhost:3000/pedals');
     }).catch(function (error) {
       console.log('Request failure: ', error);
+    });
+  };
+}
+
+export function fetchGuitarsBySearch(queryTerm) {
+  return function (dispatch) {
+    dispatch(requestGuitarsBySearch());
+    return fetch('https://equiplist.herokuapp.com/guitars?query=' + queryTerm).then(
+      response => response.json(),
+      error => console.log('An error occurred.', error)
+    ).then(function(json) {
+      dispatch(receiveGuitarsBySearch(json, queryTerm));
     });
   };
 }

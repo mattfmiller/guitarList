@@ -18,6 +18,7 @@ import PedalWishlist from './PedalWishlist';
 import EditGuitarForm from './EditGuitarForm';
 import EditAmpForm from './EditAmpForm';
 import EditPedalForm from './EditPedalForm';
+import Search from './Search';
 import { connect } from 'react-redux';
 import {fetchGuitarsInCollection} from './../actions';
 import {fetchGuitarsInWishlist} from './../actions';
@@ -45,6 +46,7 @@ componentDidMount() {
       <div className="App">
         <Header />
         <Switch>
+          <Route path='/instruments' render ={() => <Search/>}/>
           <Route exact path='/' render={() => <Recent/>}/>
           <Route exact path='/guitars/new' render={() => <NewGuitarForm/>}/>
           <Route exact path='/guitars/wishlist' render={() => <GuitarWishlist/>}/>
@@ -55,12 +57,12 @@ componentDidMount() {
           <Route exact path='/pedals/new' render={() => <NewPedalForm/>}/>
           <Route exact path='/pedals/wishlist' render={() => <PedalWishlist/>}/>
           <Route exact path='/pedals' render={() => <PedalCollection/>}/>
-          <Route exact path = '/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
-          <Route exact path = '/amps/:ampId' render={(props)=><AmpSpecs path={props} selectedAmpId={props.match.params.ampId}/>}/>
-          <Route exact path = '/pedals/:pedalId' render={(props)=><PedalSpecs path={props} selectedPedalId={props.match.params.pedalId}/>}/>
-          <Route exact path = '/guitars/:guitarId/edit' render={(props)=><EditGuitarForm path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
-          <Route exact path = '/amps/:ampId/edit' render={(props)=><EditAmpForm path={props} selectedAmpId={props.match.params.ampId}/>}/>
-          <Route exact path = '/pedals/:pedalId/edit' render={(props)=><EditPedalForm path={props} selectedPedalId={props.match.params.pedalId}/>}/>
+          <Route exact path='/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
+          <Route exact path='/amps/:ampId' render={(props)=><AmpSpecs path={props} selectedAmpId={props.match.params.ampId}/>}/>
+          <Route exact path='/pedals/:pedalId' render={(props)=><PedalSpecs path={props} selectedPedalId={props.match.params.pedalId}/>}/>
+          <Route exact path='/guitars/:guitarId/edit' render={(props)=><EditGuitarForm path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
+          <Route exact path='/amps/:ampId/edit' render={(props)=><EditAmpForm path={props} selectedAmpId={props.match.params.ampId}/>}/>
+          <Route exact path='/pedals/:pedalId/edit' render={(props)=><EditPedalForm path={props} selectedPedalId={props.match.params.pedalId}/>}/>
         </Switch>
       </div>
     );

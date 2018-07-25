@@ -5,6 +5,7 @@ const guitarSearchReducer = (state = initialState.guitarsReturnedFromSearch, act
   switch (action.type) {
 
     case types.REQUEST_GUITARS_BY_SEARCH:
+    console.log('requested');
     return state;
 
     case types.RECEIVE_GUITARS_BY_SEARCH:

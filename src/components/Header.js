@@ -4,14 +4,20 @@ import logo from './../assets/images/guitar-icon.png';
 import guitarIcon from './../assets/images/guitar-icon5.png';
 import ampIcon from './../assets/images/amp-icon2.png';
 import pedalIcon from './../assets/images/pedal-icon2.png';
+import {fetchGuitarsBySearch} from './../actions';
+import { connect } from 'react-redux';
 import './styles/App.css';
 
-function handleClick(event) {
-  event.preventDefault();
 
-}
+function Header(props) {
+  let _queryTerm = null;
 
-function Header() {
+  function handleClick(event) {
+    event.preventDefault();
+    let queryTerm = _queryTerm.value;
+    props.dispatch(fetchGuitarsBySearch(queryTerm));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,8 +51,11 @@ function Header() {
         </div>
         <div>
           <form onSubmit={handleClick}>
-            <input placeholder="Search"></input>
-            <button type='submit' >Search</button>
+            <input placeholder="Search"
+            type='text'
+            id='queryTerm'
+            ref={(input) => {_queryTerm = input;}}/>
+            <button type='submit'>Search</button>
           </form>
         </div>
       </header>
@@ -54,4 +63,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default connect()(Header);

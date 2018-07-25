@@ -5,7 +5,6 @@ import RecentAmps from './RecentAmps';
 import RecentPedals from './RecentPedals';
 
 function Recent(props) {
-  console.log(props.guitarsInCollection);
   return(
     <div>
       <p>RECENT GUITARS:</p>

@@ -141,3 +141,19 @@ export function fetchNewGuitar(body) {
     });
   };
 }
+
+export function fetchNewAmp(body) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/amps/new', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchAmpsInCollection();
+      window.location.replace('http://localhost:3000/amps');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

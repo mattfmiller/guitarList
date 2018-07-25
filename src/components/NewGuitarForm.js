@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {fetchNewGuitar} from './../actions';
+import { withRouter } from 'react-router';
+// import {fetchNewGuitar} from './../actions';
 
 function NewGuitarForm(props) {
   let _manufacturer = null;
@@ -60,8 +61,8 @@ function NewGuitarForm(props) {
       'year': _year.value,
       'imageUrl': _imageUrl.value,
       'paid': _paid.value,
-      'sold': _sold.value,
-      'weight': _sold.value,
+      'sold': 0,
+      'weight': _weight.value,
       'type': _type.value,
       'bodyWood': _bodyWood.value,
       'finish': _finish.value,
@@ -94,7 +95,16 @@ function NewGuitarForm(props) {
       'controls': _controls.value,
       'guitarCase': _guitarCase.value
     }
-    props.dispatch(fetchNewGuitar(body));
+    fetch('https://equiplist.herokuapp.com/guitars/new', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+    this.props.history.push('/guitars');
   }
 
   return(
@@ -170,6 +180,7 @@ function NewGuitarForm(props) {
           <br/>
           <input
             type='number'
+            step='0.01'
             id='paid'
             ref={(input) => {_paid = input;}}/>
         </div>
@@ -177,7 +188,7 @@ function NewGuitarForm(props) {
           <label>Type of Guitar</label>
           <br/>
           <input
-            type='number'
+            type='text'
             id='type'
             ref={(input) => {_type = input;}}/>
         </div>
@@ -186,6 +197,7 @@ function NewGuitarForm(props) {
           <br/>
           <input
             type='number'
+            step='0.01'
             id='weight'
             ref={(input) => {_weight = input;}}/>
         </div>
@@ -262,6 +274,7 @@ function NewGuitarForm(props) {
           <br/>
           <input
             type='number'
+            step='0.01'
             id='fretboardRadius'
             ref={(input) => {_fretboardRadius = input;}}/>
         </div>
@@ -310,6 +323,7 @@ function NewGuitarForm(props) {
           <br/>
           <input
             type='number'
+            step='0.01'
             id='scaleLength'
             ref={(input) => {_scaleLength = input;}}/>
         </div>

@@ -5,24 +5,19 @@ import Guitar from './Guitar';
 import './styles/List.css';
 
 function RecentGuitars(props) {
-  console.log(props.guitarsInCollection);
-  if (props.guitarsInCollection.message) {
-    console.log("error message");
-  } else {
-    console.log("list of guitars");
-  }
   let recentGuitars = props.guitarsInCollection.slice(-3).reverse();
-  return null;
-    // <div className="container">
-    //   // {recentGuitars.map((guitar) =>
-    //   //    <Guitar imageUrl = {guitar.imageUrl}
-    //   //     manufacturer = {guitar.manufacturer}
-    //   //     model = {guitar.model}
-    //   //     id = {guitar.id}
-    //   //     key = {guitar.id} />
-    //   // )}
-    // </div>
-  // );
+  if (props.guitarsInCollection.length === 0) return (<h3>Hmmm, can't seem to find any guitars in the collection...</h3>);
+  return(
+    <div className="container">
+      {recentGuitars.map((guitar) =>
+         <Guitar imageUrl = {guitar.imageUrl}
+          manufacturer = {guitar.manufacturer}
+          model = {guitar.model}
+          id = {guitar.id}
+          key = {guitar.id} />
+      )}
+    </div>
+  );
 }
 
 

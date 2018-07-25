@@ -6,6 +6,7 @@ import './styles/List.css';
 
 function RecentPedals(props) {
   let recentPedals = props.pedalsInCollection.slice(-3).reverse();
+  if (props.pedalsInCollection.length === 0) return (<h3>Hmmm, can't seem to find any pedals in the collection...</h3>);
   return(
     <div className="container">
       {recentPedals.map((pedal) =>

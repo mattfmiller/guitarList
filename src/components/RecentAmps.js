@@ -6,6 +6,7 @@ import './styles/List.css';
 
 function RecentAmps(props) {
   let recentAmps = props.ampsInCollection.slice(-3).reverse();
+  if (props.ampsInCollection.length === 0) return (<h3>Hmmm, can't seem to find any amps in the collection...</h3>);
   return(
     <div className="container">
       {recentAmps.map((amp) =>

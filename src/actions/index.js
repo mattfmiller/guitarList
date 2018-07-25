@@ -235,6 +235,7 @@ export function fetchEditPedal(body, id) {
 export function fetchGuitarsBySearch(queryTerm) {
   return function (dispatch) {
     dispatch(requestGuitarsBySearch());
+    queryTerm = queryTerm.replace(' ', '_');
     return fetch('https://equiplist.herokuapp.com/guitars?query=' + queryTerm).then(
       response => response.json(),
       error => console.log('An error occurred.', error)

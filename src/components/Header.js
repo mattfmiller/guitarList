@@ -6,6 +6,11 @@ import ampIcon from './../assets/images/amp-icon2.png';
 import pedalIcon from './../assets/images/pedal-icon2.png';
 import './styles/App.css';
 
+function handleClick(event) {
+  event.preventDefault();
+
+}
+
 function Header() {
   return (
     <div className="App">
@@ -39,7 +44,10 @@ function Header() {
           </ul>
         </div>
         <div>
-          <input placeholder="Search"></input>
+          <form onSubmit={handleClick}>
+            <input placeholder="Search"></input>
+            <button type='submit' >Search</button>
+          </form>
         </div>
       </header>
     </div>

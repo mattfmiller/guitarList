@@ -189,3 +189,35 @@ export function fetchEditGuitar(body, id) {
     });
   };
 }
+
+export function fetchEditAmp(body, id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/amps/' + id + '/edit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchAmpsInCollection();
+      window.location.replace('http://localhost:3000/amps');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}
+
+export function fetchEditPedal(body, id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/pedals/' + id + '/edit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchPedalsInCollection();
+      window.location.replace('http://localhost:3000/pedals');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import {fetchEditAmp} from './../actions';
 
 function EditAmpForm(props) {
   let selectedAmp;
@@ -28,6 +29,9 @@ function EditAmpForm(props) {
   let _paid = null;
   let _sold = null;
   let _weight = null;
+  let _instrument = null;
+  let _type = null;
+  let _power = null;
   let _cabinetWood = null;
   let _finish = null;
   let _grillCloth = null;
@@ -52,7 +56,45 @@ function EditAmpForm(props) {
 
   function handleClick(event) {
     event.preventDefault();
-    console.log({wishlist: JSON.parse(_wishlist.value), manufacturer: _manufacturer.value});
+    let body = {
+      'manufacturer': _manufacturer.value,
+      'model': _model.value,
+      'current': true,
+      'wishlist': _wishlist.value,
+      'country': _country.value,
+      'serialNumber': _serialNumber.value,
+      'description': _description.value,
+      'year': _year.value,
+      'imageUrl': _imageUrl.value,
+      'paid': _paid.value,
+      'sold': 0,
+      'weight': _weight.value,
+      'instrument': _instrument.value,
+      'type': _type.value,
+      'power': _power.value,
+      'cabinetWood': _cabinetWood.value,
+      'finish': _finish.value,
+      'grillCloth': _grillCloth.value,
+      'width': _width.value,
+      'depth': _depth.value,
+      'height': _height.value,
+      'electronics': _electronics.value,
+      'speakers': _speakers.value,
+      'tubes': _tubes.value,
+      'reverb': _reverb.value,
+      'tremolo': _tremolo.value,
+      'externalSpeaker': _externalSpeaker.value,
+      'handle': _handle.value,
+      'knobs': _knobs.value,
+      'jewelLight': _jewelLight.value,
+      'controlPanel': _controlPanel.value,
+      'logo': _logo.value,
+      'tiltLegs': _tiltLegs.value,
+      'feet': _feet.value,
+      'controls': _controls.value,
+      'cover': _cover.value,
+    }
+    props.dispatch(fetchEditAmp(body, selectedAmp.id));
   }
 
   return(
@@ -147,6 +189,33 @@ function EditAmpForm(props) {
             id='weight'
             defaultValue={selectedAmp.weight}
             ref={(input) => {_weight = input;}}/>
+        </div>
+        <div>
+          <label>instrument</label>
+          <br/>
+          <input
+            type='text'
+            id='instrument'
+            defaultValue={selectedAmp.instrument}
+            ref={(input) => {_instrument = input;}}/>
+        </div>
+        <div>
+          <label>type</label>
+          <br/>
+          <input
+            type='text'
+            id='type'
+            defaultValue={selectedAmp.type}
+            ref={(input) => {_type = input;}}/>
+        </div>
+        <div>
+          <label>power</label>
+          <br/>
+          <input
+            type='number'
+            id='power'
+            defaultValue={selectedAmp.power}
+            ref={(input) => {_power = input;}}/>
         </div>
         <div>
           <label>cabinetWood</label>

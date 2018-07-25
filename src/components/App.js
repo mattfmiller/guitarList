@@ -32,21 +32,21 @@ class App extends Component {
     super(props);
   }
 
-componentDidMount() {
-  this.props.dispatch(fetchGuitarsInCollection());
-  this.props.dispatch(fetchGuitarsInWishlist());
-  this.props.dispatch(fetchAmpsInCollection());
-  this.props.dispatch(fetchAmpsInWishlist());
-  this.props.dispatch(fetchPedalsInCollection());
-  this.props.dispatch(fetchPedalsInWishlist());
-};
+  componentDidMount() {
+    this.props.dispatch(fetchGuitarsInCollection());
+    this.props.dispatch(fetchGuitarsInWishlist());
+    this.props.dispatch(fetchAmpsInCollection());
+    this.props.dispatch(fetchAmpsInWishlist());
+    this.props.dispatch(fetchPedalsInCollection());
+    this.props.dispatch(fetchPedalsInWishlist());
+  };
 
   render() {
     return (
       <div className="App">
         <Header />
         <Switch>
-          <Route path='/instruments' render ={() => <Search/>}/>
+          <Route path='/instruments' render ={() => <Search currentRouterPath={this.props.location.search} />}/>
           <Route exact path='/' render={() => <Recent/>}/>
           <Route exact path='/guitars/new' render={() => <NewGuitarForm/>}/>
           <Route exact path='/guitars/wishlist' render={() => <GuitarWishlist/>}/>

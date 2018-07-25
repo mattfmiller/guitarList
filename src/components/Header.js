@@ -5,17 +5,16 @@ import guitarIcon from './../assets/images/guitar-icon5.png';
 import ampIcon from './../assets/images/amp-icon2.png';
 import pedalIcon from './../assets/images/pedal-icon2.png';
 import {fetchGuitarsBySearch} from './../actions';
-import { connect } from 'react-redux';
 import './styles/App.css';
 
 
-function Header(props) {
+function Header() {
   let _queryTerm = null;
 
   function handleClick(event) {
     event.preventDefault();
     let queryTerm = _queryTerm.value;
-    props.dispatch(fetchGuitarsBySearch(queryTerm));
+    window.location.replace('http://localhost:3000/instruments?query=' + queryTerm);
   }
 
   return (
@@ -63,4 +62,4 @@ function Header(props) {
   );
 }
 
-export default connect()(Header);
+export default Header;

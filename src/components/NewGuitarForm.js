@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-// import {fetchNewGuitar} from './../actions';
+import {fetchNewGuitar} from './../actions';
 
 function NewGuitarForm(props) {
   let _manufacturer = null;
@@ -95,16 +95,17 @@ function NewGuitarForm(props) {
       'controls': _controls.value,
       'guitarCase': _guitarCase.value
     }
-    fetch('https://equiplist.herokuapp.com/guitars/new', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(body)
-    }).then(function(data) {
-      console.log('Request success: ', data);
-    }).catch(function (error) {
-      console.log('Request failure: ', error);
-    });
-    this.props.history.push('/guitars');
+    // fetch('https://equiplist.herokuapp.com/guitars/new', {
+    //   method: 'POST',
+    //   headers: {'Content-Type':'application/json'},
+    //   body: JSON.stringify(body)
+    // }).then(function(data) {
+    //   console.log('Request success: ', data);
+    // }).catch(function (error) {
+    //   console.log('Request failure: ', error);
+    // });
+    // this.props.history.push('/guitars');
+    props.dispatch(fetchNewGuitar(body));
   }
 
   return(

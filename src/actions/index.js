@@ -126,15 +126,18 @@ export function fetchPedalsInWishlist() {
   };
 }
 
-// export function fetchNewGuitar(body) {
-//   return function ()
-//   fetch('https://equiplist.herokuapp.com/guitars', {
-//     method: 'POST',
-//     headers: {'Content-Type':'application/json'},
-//     body: JSON.stringify(body)
-//   }).then(function(data) {
-//     console.log('Request success: ', data);
-//   }).catch(function (error) {
-//     console.log('Request failure: ', error);
-//   });
-// }
+export function fetchNewGuitar(body) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/guitars/new', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchGuitarsInCollection();
+      window.location.replace('http://localhost:3000/guitars');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

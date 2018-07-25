@@ -125,3 +125,15 @@ export function fetchPedalsInWishlist() {
     });
   };
 }
+
+export function fetchNewGuitar(body) {
+  return fetch('https://equiplist.herokuapp.com/guitars', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(body)
+  }).then(function(data) {
+    console.log('Request success: ', data);
+  }).catch(function (error) {
+  console.log('Request failure: ', error);
+  });
+}

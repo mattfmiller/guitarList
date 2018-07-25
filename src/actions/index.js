@@ -173,3 +173,19 @@ export function fetchNewPedal(body) {
     });
   };
 }
+
+export function fetchEditGuitar(body, id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/guitars/' + id + '/edit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(body)
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchGuitarsInCollection();
+      window.location.replace('http://localhost:3000/guitars');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

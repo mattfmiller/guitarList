@@ -1,5 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import {fetchEditGuitar} from './../actions';
 
 function EditGuitarForm(props) {
   let selectedGuitar;
@@ -28,6 +29,7 @@ function EditGuitarForm(props) {
   let _paid = null;
   let _sold = null;
   let _weight = null;
+  let _type = null;
   let _bodyWood = null;
   let _finish = null;
   let _color = null;
@@ -61,7 +63,52 @@ function EditGuitarForm(props) {
 
   function handleClick(event) {
     event.preventDefault();
-    console.log({wishlist: JSON.parse(_wishlist.value), manufacturer: _manufacturer.value});
+    let body = {
+      'manufacturer': _manufacturer.value,
+      'model': _model.value,
+      'current': true,
+      'wishlist': _wishlist.value,
+      'country': _country.value,
+      'serialNumber': _serialNumber.value,
+      'description': _description.value,
+      'year': _year.value,
+      'imageUrl': _imageUrl.value,
+      'paid': _paid.value,
+      'sold': 0,
+      'weight': _weight.value,
+      'type': _type.value,
+      'bodyWood': _bodyWood.value,
+      'finish': _finish.value,
+      'color': _color.value,
+      'binding': _binding.value,
+      'neckWood': _neckWood.value,
+      'neckType': _neckType.value,
+      'neckProfile': _neckProfile.value,
+      'fretboardWood': _fretboardWood.value,
+      'fretboardRadius': _fretboardRadius.value,
+      'frets': _frets.value,
+      'fretMaterial': _fretMaterial.value,
+      'inlays': _inlays.value,
+      'nutMaterial': _nutMaterial.value,
+      'nutWidth': _nutWidth.value,
+      'scaleLength': _scaleLength.value,
+      'neckPickup': _neckPickup.value,
+      'middlePickup': _middlePickup.value,
+      'bridgePickup': _bridgePickup.value,
+      'volumePots': _volumePots.value,
+      'tonePots': _tonePots.value,
+      'capacitor': _capacitor.value,
+      'tuners': _tuners.value,
+      'tunerButtons': _tunerButtons.value,
+      'bridge': _bridge.value,
+      'tailpiece': _tailpiece.value,
+      'guitarSwitch': _guitarSwitch.value,
+      'knobs': _knobs.value,
+      'pickguard': _pickguard.value,
+      'controls': _controls.value,
+      'guitarCase': _guitarCase.value
+    }
+    props.dispatch(fetchEditGuitar(body, selectedGuitar.id));
   }
 
   return(
@@ -147,6 +194,15 @@ function EditGuitarForm(props) {
             id='paid'
             defaultValue={selectedGuitar.paid}
             ref={(input) => {_paid = input;}}/>
+        </div>
+        <div>
+          <label>Type of Guitar</label>
+          <br/>
+          <input
+            type='text'
+            id='type'
+            defaultValue={selectedGuitar.type}
+            ref={(input) => {_type = input;}}/>
         </div>
         <div>
           <label>Weight</label>

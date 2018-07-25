@@ -20,6 +20,7 @@ import EditAmpForm from './EditAmpForm';
 import EditPedalForm from './EditPedalForm';
 import { connect } from 'react-redux';
 import {fetchGuitarsInCollection} from './../actions';
+import {fetchGuitarsInWishlist} from './../actions';
 
 class App extends Component {
   constructor(props) {
@@ -28,10 +29,10 @@ class App extends Component {
 
 componentDidMount() {
   this.props.dispatch(fetchGuitarsInCollection());
+  this.props.dispatch(fetchGuitarsInWishlist());
 };
 
   render() {
-    // console.log(this.props.location);
     return (
       <div className="App">
         <Header />

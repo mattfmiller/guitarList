@@ -5,15 +5,10 @@ import Guitar from './Guitar';
 import './styles/List.css';
 
 function GuitarWishlist(props) {
-  return(
+  console.log(props.guitarsInWishlist);
+  return (
     <div className="container">
-      {props.guitarsInWishlist.map((guitar) =>
-         <Guitar imageUrl = {guitar.imageUrl}
-          manufacturer = {guitar.manufacturer}
-          model = {guitar.model}
-          id = {guitar.id}
-          key = {guitar.id} />
-      )}
+    
     </div>
   );
 }

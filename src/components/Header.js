@@ -7,7 +7,6 @@ import pedalIcon from './../assets/images/pedal-icon2.png';
 import {fetchGuitarsBySearch} from './../actions';
 import './styles/App.css';
 
-
 function Header() {
   let _queryTerm = null;
 

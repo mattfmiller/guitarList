@@ -46,8 +46,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route path='/instruments' render ={() => <Search currentRouterPath={this.props.location.search} />}/>
           <Route exact path='/' render={() => <Recent/>}/>
+          <Route path='/instruments' render ={() => <Search currentRouterPath={this.props.location.search} />}/>
           <Route exact path='/guitars/new' render={() => <NewGuitarForm/>}/>
           <Route exact path='/guitars/wishlist' render={() => <GuitarWishlist/>}/>
           <Route exact path='/guitars' render={() => <GuitarCollection/>}/>
@@ -57,12 +57,12 @@ class App extends Component {
           <Route exact path='/pedals/new' render={() => <NewPedalForm/>}/>
           <Route exact path='/pedals/wishlist' render={() => <PedalWishlist/>}/>
           <Route exact path='/pedals' render={() => <PedalCollection/>}/>
-          <Route exact path='/guitars/:guitarId' render={(props)=><GuitarSpecs path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
-          <Route exact path='/amps/:ampId' render={(props)=><AmpSpecs path={props} selectedAmpId={props.match.params.ampId}/>}/>
-          <Route exact path='/pedals/:pedalId' render={(props)=><PedalSpecs path={props} selectedPedalId={props.match.params.pedalId}/>}/>
-          <Route exact path='/guitars/:guitarId/edit' render={(props)=><EditGuitarForm path={props} selectedGuitarId={props.match.params.guitarId}/>}/>
-          <Route exact path='/amps/:ampId/edit' render={(props)=><EditAmpForm path={props} selectedAmpId={props.match.params.ampId}/>}/>
-          <Route exact path='/pedals/:pedalId/edit' render={(props)=><EditPedalForm path={props} selectedPedalId={props.match.params.pedalId}/>}/>
+          <Route exact path='/guitars/:guitarId' render={(props)=><GuitarSpecs selectedGuitarId={props.match.params.guitarId}/>}/>
+          <Route exact path='/amps/:ampId' render={(props)=><AmpSpecs selectedAmpId={props.match.params.ampId}/>}/>
+          <Route exact path='/pedals/:pedalId' render={(props)=><PedalSpecs selectedPedalId={props.match.params.pedalId}/>}/>
+          <Route exact path='/guitars/:guitarId/edit' render={(props)=><EditGuitarForm selectedGuitarId={props.match.params.guitarId}/>}/>
+          <Route exact path='/amps/:ampId/edit' render={(props)=><EditAmpForm selectedAmpId={props.match.params.ampId}/>}/>
+          <Route exact path='/pedals/:pedalId/edit' render={(props)=><EditPedalForm selectedPedalId={props.match.params.pedalId}/>}/>
         </Switch>
       </div>
     );

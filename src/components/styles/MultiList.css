@@ -1,0 +1,9 @@
+.box h1 {
+  margin-bottom: 80px;
+}
+
+.box {
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 60px;
+}

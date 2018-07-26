@@ -9,10 +9,25 @@
 }
 
 .instrument img {
-  width: 400px;
+  max-height:400px;
+  max-width:400px;
+  height:auto;
+  width:auto;
 }
 
 .instrument h2 {
   padding-bottom: 0px;
   margin-bottom: 0px;
+}
+
+.instrument h2:hover {
+  color: grey;
+}
+
+.instrumentImage {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }

@@ -8,6 +8,7 @@ import queryString from 'query-string';
 import {fetchGuitarsBySearch} from './../actions';
 import {fetchAmpsBySearch} from './../actions';
 import {fetchPedalsBySearch} from './../actions';
+import './styles/MultiList.css';
 
 class Search extends Component {
   constructor(props) {
@@ -26,17 +27,19 @@ class Search extends Component {
   render() {
     return(
       <div>
-        <p>GUITARS:</p>
+        <h1>GUITARS:</h1>
         <div className='container'>
           <SearchGuitars />
         </div>
+        <br/>
         <hr/>
-        <p>AMPS:</p>
+        <h1>AMPS:</h1>
         <div className='container'>
           <SearchAmps />
         </div>
+        <br/>
         <hr/>
-        <p>PEDALS:</p>
+        <h1>PEDALS:</h1>
         <div className='container'>
           <SearchPedals />
         </div>

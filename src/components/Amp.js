@@ -7,7 +7,9 @@ function Amp(props) {
   let linkPath = '/amps/' + props.id;
   return(
     <Link style={{textDecoration: 'none', color: 'black'}} to={linkPath}><div className='instrument'>
-      <img src={props.imageUrl} alt={props.model}/>
+      <div className='instrumentImage'>
+        <img src={props.imageUrl} alt={props.model}/>
+      </div>
       <h2>{props.manufacturer} - {props.model}</h2>
     </div></Link>
   );

@@ -38,7 +38,6 @@ function GuitarSpecs(props) {
   return(
     <div>
       {optionalContent}
-
       <Link to={editPath}><p>Edit</p></Link>
     </div>
   );

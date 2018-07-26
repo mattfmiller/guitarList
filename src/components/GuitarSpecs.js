@@ -7,7 +7,7 @@ import './styles/InstrumentSpecs.css';
 function GuitarSpecs(props) {
   let optionalContent;
   let selectedGuitar;
-  if (props.guitarsInCollection.length === 0) return (<h1>loading...</h1>);
+  // if (props.guitarsInCollection.length === 0) return (<h1>loading...</h1>);
 
   {props.guitarsInCollection.forEach(function(guitar) {
     if (guitar.id === parseInt(props.selectedGuitarId)) {
@@ -188,7 +188,8 @@ function GuitarSpecs(props) {
   return(
     <div className='box'>
       {optionalContent}
-      <Link to={editPath}><p>Edit</p></Link>
+      <br/>
+      <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
     </div>
   );
 }

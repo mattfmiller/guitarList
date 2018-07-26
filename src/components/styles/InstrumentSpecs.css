@@ -27,7 +27,11 @@
 }
 
 .box img {
-  width: 1300px;
+  max-height:600px;
+  max-width:1300px;
+  height:auto;
+  width:auto;
+  margin-bottom: 40px;
 }
 
 .columns  {

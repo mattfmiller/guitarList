@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
+import './styles/InstrumentSpecs.css';
 
 function GuitarSpecs(props) {
   let optionalContent;
@@ -23,20 +24,169 @@ function GuitarSpecs(props) {
   let editPath = '/guitars/' + props.selectedGuitarId + '/edit';
 
   if (selectedGuitar.wishlist) {
-    optionalContent = <div>
-      <h2>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h2>
+    optionalContent =
+    <div>
+      <h4 className='floatRight'><strong>Wishlist</strong></h4>
+      <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
+      <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
       <img src={selectedGuitar.imageUrl}/>
+      <h4>{selectedGuitar.description} Made In {selectedGuitar.country}.</h4>
+      <div className='left'>
+        <h2>Body</h2>
+        <hr/>
+        <div className='columns'>
+          <div>
+            <h3><strong>Wood:</strong>  {selectedGuitar.bodyWood}</h3>
+            <h3><strong>Binding:</strong> {selectedGuitar.binding}</h3>
+          </div>
+          <div>
+            <h3><strong>Finish:</strong> {selectedGuitar.finish}</h3>
+            <h3><strong>Color:</strong> {selectedGuitar.color}</h3>
+          </div>
+        </div>
+        <br/>
+        <h2>Neck</h2>
+        <hr/>
+        <div className='columns'>
+          <div>
+            <h3><strong>{selectedGuitar.neckType} Neck</strong></h3>
+            <h3><strong>Wood:</strong> {selectedGuitar.neckWood}</h3>
+            <h3><strong>Profile:</strong> {selectedGuitar.neckProfile}</h3>
+            <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength} ''</h3>
+            <h3><strong>Fretboard Wood:</strong> {selectedGuitar.fretboardWood}</h3>
+            <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius} ''</h3>
+          </div>
+          <div>
+            <h3><strong>Number of Frets:</strong> {selectedGuitar.frets}</h3>
+            <h3><strong>Frets:</strong> {selectedGuitar.fretMaterial}</h3>
+            <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth} ''</h3>
+            <h3><strong>Nut Material:</strong> {selectedGuitar.nutMaterial}</h3>
+            <h3><strong>Inlays:</strong> {selectedGuitar.inlays}</h3>
+          </div>
+        </div>
+        <br/>
+        <h2>Hardware</h2>
+        <hr/>
+        <div className='columns'>
+          <div>
+            <h3><strong>Bridge:</strong> {selectedGuitar.bridge}</h3>
+            <h3><strong>Tailpiece:</strong> {selectedGuitar.tailpiece}</h3>
+            <h3><strong>Tuning Machines:</strong> {selectedGuitar.tuners}</h3>
+            <h3><strong>Tuner Buttons:</strong> {selectedGuitar.tunerButtons}</h3>
+          </div>
+          <div>
+            <h3><strong>Switch:</strong> {selectedGuitar.guitarSwitch}</h3>
+            <h3><strong>Knobs:</strong> {selectedGuitar.knobs}</h3>
+            <h3><strong>Pickguard:</strong> {selectedGuitar.pickguard}</h3>
+          </div>
+        </div>
+        <br/>
+        <h2>Electronics</h2>
+        <hr/>
+        <div className='columns'>
+          <div>
+            <h3><strong>Neck Pickup:</strong> {selectedGuitar.neckPickup}</h3>
+            <h3><strong>Middle Pickup:</strong> {selectedGuitar.middlePickup}</h3>
+            <h3><strong>Bridge Pickup:</strong> {selectedGuitar.bridgePickup}</h3>
+            <h3><strong>Controls:</strong> {selectedGuitar.controls}</h3>
+          </div>
+          <div>
+            <h3><strong>Volume Pot(s):</strong> {selectedGuitar.volumePots}</h3>
+            <h3><strong>Tone Pot(s):</strong> {selectedGuitar.tonePots}</h3>
+            <h3><strong>Capacitor:</strong> {selectedGuitar.capacitor}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   } else {
-    optionalContent = <div>
-      <h2>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h2>
+    optionalContent =
+    <div>
+      <h4 className='floatRight'><strong>Collection</strong></h4>
+      <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
+      <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
       <img src={selectedGuitar.imageUrl}/>
-      <p>${selectedGuitar.paid}</p>
+      <h3><strong>Serial Number: </strong>{selectedGuitar.serialNumber} ~ <strong>Year: </strong>{selectedGuitar.year}</h3>
+        <h4>{selectedGuitar.description} Made In {selectedGuitar.country}.</h4>
+        <div className='left'>
+          <h2>Body</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <h3><strong>Weight:</strong> {selectedGuitar.weight} lbs</h3>
+              <h3><strong>Wood:</strong>  {selectedGuitar.bodyWood}</h3>
+              <h3><strong>Binding:</strong> {selectedGuitar.binding}</h3>
+            </div>
+            <div>
+              <h3><strong>Finish:</strong> {selectedGuitar.finish}</h3>
+              <h3><strong>Color:</strong> {selectedGuitar.color}</h3>
+            </div>
+          </div>
+          <br/>
+          <h2>Neck</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <h3><strong>{selectedGuitar.neckType} Neck</strong></h3>
+              <h3><strong>Wood:</strong> {selectedGuitar.neckWood}</h3>
+              <h3><strong>Profile:</strong> {selectedGuitar.neckProfile}</h3>
+              <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength} ''</h3>
+              <h3><strong>Fretboard Wood:</strong> {selectedGuitar.fretboardWood}</h3>
+              <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius} ''</h3>
+            </div>
+            <div>
+              <h3><strong>Number of Frets:</strong> {selectedGuitar.frets}</h3>
+              <h3><strong>Frets:</strong> {selectedGuitar.fretMaterial}</h3>
+              <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth} ''</h3>
+              <h3><strong>Nut Material:</strong> {selectedGuitar.nutMaterial}</h3>
+              <h3><strong>Inlays:</strong> {selectedGuitar.inlays}</h3>
+            </div>
+          </div>
+          <br/>
+          <h2>Hardware</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <h3><strong>Bridge:</strong> {selectedGuitar.bridge}</h3>
+              <h3><strong>Tailpiece:</strong> {selectedGuitar.tailpiece}</h3>
+              <h3><strong>Tuning Machines:</strong> {selectedGuitar.tuners}</h3>
+              <h3><strong>Tuner Buttons:</strong> {selectedGuitar.tunerButtons}</h3>
+            </div>
+            <div>
+              <h3><strong>Switch:</strong> {selectedGuitar.guitarSwitch}</h3>
+              <h3><strong>Knobs:</strong> {selectedGuitar.knobs}</h3>
+              <h3><strong>Pickguard:</strong> {selectedGuitar.pickguard}</h3>
+            </div>
+          </div>
+          <br/>
+          <h2>Electronics</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <h3><strong>Neck Pickup:</strong> {selectedGuitar.neckPickup}</h3>
+              <h3><strong>Middle Pickup:</strong> {selectedGuitar.middlePickup}</h3>
+              <h3><strong>Bridge Pickup:</strong> {selectedGuitar.bridgePickup}</h3>
+              <h3><strong>Controls:</strong> {selectedGuitar.controls}</h3>
+            </div>
+            <div>
+              <h3><strong>Volume Pot(s):</strong> {selectedGuitar.volumePots}</h3>
+              <h3><strong>Tone Pot(s):</strong> {selectedGuitar.tonePots}</h3>
+              <h3><strong>Capacitor:</strong> {selectedGuitar.capacitor}</h3>
+            </div>
+          </div>
+          <br/>
+          <h2>Accessories</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <h3><strong>Case:</strong> {selectedGuitar.guitarCase}</h3>
+            </div>
+          </div>
+        </div>
     </div>
   }
 
   return(
-    <div>
+    <div className='box'>
       {optionalContent}
       <Link to={editPath}><p>Edit</p></Link>
     </div>

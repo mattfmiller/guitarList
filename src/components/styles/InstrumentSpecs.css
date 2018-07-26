@@ -1,0 +1,38 @@
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.floatRight {
+  float: right;
+  margin-top: 0px;
+}
+
+.floatLeft {
+  float: left;
+  margin-top: 0px;
+}
+
+.box h3 {
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.box h4 {
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.box img {
+  width: 1300px;
+}
+
+.columns  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}

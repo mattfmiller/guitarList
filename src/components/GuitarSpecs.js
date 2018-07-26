@@ -28,7 +28,7 @@ function GuitarSpecs(props) {
   if (selectedGuitar.wishlist) {
     optionalContent =
     <div>
-      <h4 className='floatRight'><strong>Wishlist</strong></h4>
+      <Link style={{textDecoration: 'none', color: 'black'}} to='/guitars/wishlist'><h4 className='floatRight'><strong>Wishlist</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
       <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
       <img src={selectedGuitar.imageUrl}/>
@@ -54,14 +54,14 @@ function GuitarSpecs(props) {
             <h3><strong>{selectedGuitar.neckType} Neck</strong></h3>
             <h3><strong>Wood:</strong> {selectedGuitar.neckWood}</h3>
             <h3><strong>Profile:</strong> {selectedGuitar.neckProfile}</h3>
-            <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength} ''</h3>
+            <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength}''</h3>
             <h3><strong>Fretboard Wood:</strong> {selectedGuitar.fretboardWood}</h3>
-            <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius} ''</h3>
+            <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius}''</h3>
           </div>
           <div>
             <h3><strong>Number of Frets:</strong> {selectedGuitar.frets}</h3>
             <h3><strong>Frets:</strong> {selectedGuitar.fretMaterial}</h3>
-            <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth} ''</h3>
+            <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth}''</h3>
             <h3><strong>Nut Material:</strong> {selectedGuitar.nutMaterial}</h3>
             <h3><strong>Inlays:</strong> {selectedGuitar.inlays}</h3>
           </div>
@@ -103,7 +103,7 @@ function GuitarSpecs(props) {
   } else {
     optionalContent =
     <div>
-      <h4 className='floatRight'><strong>Collection</strong></h4>
+      <Link style={{textDecoration: 'none', color: 'black'}} to='/guitars'><h4 className='floatRight'><strong>Collection</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
       <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
       <img src={selectedGuitar.imageUrl}/>
@@ -131,14 +131,14 @@ function GuitarSpecs(props) {
               <h3><strong>{selectedGuitar.neckType} Neck</strong></h3>
               <h3><strong>Wood:</strong> {selectedGuitar.neckWood}</h3>
               <h3><strong>Profile:</strong> {selectedGuitar.neckProfile}</h3>
-              <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength} ''</h3>
+              <h3><strong>Scale Length:</strong> {selectedGuitar.scaleLength}''</h3>
               <h3><strong>Fretboard Wood:</strong> {selectedGuitar.fretboardWood}</h3>
-              <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius} ''</h3>
+              <h3><strong>Fretboard Radius:</strong> {selectedGuitar.fretboardRadius}''</h3>
             </div>
             <div>
               <h3><strong>Number of Frets:</strong> {selectedGuitar.frets}</h3>
               <h3><strong>Frets:</strong> {selectedGuitar.fretMaterial}</h3>
-              <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth} ''</h3>
+              <h3><strong>Nut Width:</strong> {selectedGuitar.nutWidth}''</h3>
               <h3><strong>Nut Material:</strong> {selectedGuitar.nutMaterial}</h3>
               <h3><strong>Inlays:</strong> {selectedGuitar.inlays}</h3>
             </div>
@@ -198,8 +198,10 @@ function GuitarSpecs(props) {
     <div className='box'>
       {optionalContent}
       <br/>
-      <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
-      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      <div className='edit-delete'>
+        <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+        <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      </div>
     </div>
   );
 }

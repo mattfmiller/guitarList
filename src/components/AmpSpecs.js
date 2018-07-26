@@ -27,7 +27,7 @@ function AmpSpecs(props) {
   if (selectedAmp.wishlist) {
     optionalContent =
     <div>
-      <h4 className='floatRight'><strong>Wishlist</strong></h4>
+      <Link style={{textDecoration: 'none', color: 'black'}} to='/amps/wishlist'><h4 className='floatRight'><strong>Wishlist</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedAmp.instrument} Amplifier</strong></h4>
       <h1>{selectedAmp.manufacturer} - {selectedAmp.model}</h1>
       <img src={selectedAmp.imageUrl}/>
@@ -87,7 +87,7 @@ function AmpSpecs(props) {
   } else {
     optionalContent =
     <div>
-      <h4 className='floatRight'><strong>Collection</strong></h4>
+      <Link style={{textDecoration: 'none', color: 'black'}} to='/amps'><h4 className='floatRight'><strong>Collection</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedAmp.instrument} Amplifier</strong></h4>
       <h1>{selectedAmp.manufacturer} - {selectedAmp.model}</h1>
       <img src={selectedAmp.imageUrl}/>
@@ -166,8 +166,10 @@ function AmpSpecs(props) {
     <div className='box'>
       {optionalContent}
       <br/>
-      <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
-      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      <div className='edit-delete'>
+        <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+        <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      </div>
     </div>
   );
 }

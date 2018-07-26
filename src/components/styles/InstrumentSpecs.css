@@ -40,3 +40,13 @@
   grid-gap: 20px;
   grid-auto-flow: dense;
 }
+
+.edit-delete {
+  width: 130px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.edit-delete h3:hover {
+  cursor: pointer;
+}

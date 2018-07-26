@@ -31,10 +31,16 @@ function PedalSpecs(props) {
     }
   }
 
+  if (selectedPedal.wishlist) {
+    optionalContent = <Link style={{textDecoration: 'none', color: 'black'}} to='/pedals/wishlist'><h4 className='floatRight'><strong>Wishlist</strong></h4></Link>
+  } else {
+    optionalContent = <Link style={{textDecoration: 'none', color: 'black'}} to='/pedals'><h4 className='floatRight'><strong>Collection</strong></h4></Link>
+  }
+
   return(
     <div className='box'>
       <div>
-        <h4 className='floatRight'><strong>Collection</strong></h4>
+        {optionalContent}
         <h4 className='floatLeft'><strong>{selectedPedal.type} Pedal</strong></h4>
         <h1>{selectedPedal.manufacturer} - {selectedPedal.model}</h1>
         <img src={selectedPedal.imageUrl}/>
@@ -82,8 +88,10 @@ function PedalSpecs(props) {
           </div>
       </div>
       <br/>
-      <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
-      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      <div className='edit-delete'>
+        <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+        <h3 onClick={handleDelete}><strong>Delete</strong></h3>
+      </div>
     </div>
   );
 }

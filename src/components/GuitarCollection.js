@@ -7,14 +7,17 @@ import './styles/List.css';
 function GuitarCollection(props) {
   if (props.guitarsInCollection.length === 0) return (<h3>Hmmm, can't seem find any guitars in the collection...</h3>);
   return (
-    <div className="container">
-      {props.guitarsInCollection.map((guitar) =>
-        <Guitar imageUrl = {guitar.imageUrl}
-          manufacturer = {guitar.manufacturer}
-          model = {guitar.model}
-          id = {guitar.id}
-          key = {guitar.id} />
-      )}
+    <div className='box'>
+      <h1>GUITAR COLLECTION:</h1>
+      <div className="container">
+        {props.guitarsInCollection.map((guitar) =>
+          <Guitar imageUrl = {guitar.imageUrl}
+            manufacturer = {guitar.manufacturer}
+            model = {guitar.model}
+            id = {guitar.id}
+            key = {guitar.id} />
+        )}
+      </div>
     </div>
   );
 }

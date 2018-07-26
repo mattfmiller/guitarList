@@ -7,6 +7,8 @@ import './styles/List.css';
 function PedalCollection(props) {
   if (props.pedalsInCollection.length === 0) return (<h3>Hmmm, can't seem find any pedals in the collection...</h3>);
   return(
+    <div className='box'>
+    <h1>PEDAL COLLECTION:</h1>
     <div className="container">
       {props.pedalsInCollection.map((pedal) =>
          <Pedal imageUrl = {pedal.imageUrl}
@@ -16,6 +18,7 @@ function PedalCollection(props) {
           key = {pedal.id} />
       )}
     </div>
+  </div>
   );
 }
 

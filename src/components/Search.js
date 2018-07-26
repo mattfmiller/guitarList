@@ -26,22 +26,24 @@ class Search extends Component {
 
   render() {
     return(
-      <div>
-        <h1>GUITARS:</h1>
-        <div className='container'>
-          <SearchGuitars />
-        </div>
-        <br/>
-        <hr/>
-        <h1>AMPS:</h1>
-        <div className='container'>
-          <SearchAmps />
-        </div>
-        <br/>
-        <hr/>
-        <h1>PEDALS:</h1>
-        <div className='container'>
-          <SearchPedals />
+      <div className='box'>
+        <div>
+          <h1>GUITARS:</h1>
+          <div className='container'>
+            <SearchGuitars />
+          </div>
+          <br/>
+          <hr/>
+          <h1>AMPS:</h1>
+          <div className='container'>
+            <SearchAmps />
+          </div>
+          <br/>
+          <hr/>
+          <h1>PEDALS:</h1>
+          <div className='container'>
+            <SearchPedals />
+          </div>
         </div>
       </div>
     );

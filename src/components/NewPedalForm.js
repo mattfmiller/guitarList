@@ -72,177 +72,191 @@ function NewPedalForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
-        <h2>General</h2>
-        <hr/>
-        <div>
-          <label>Manufacturer</label>
-          <br/>
-          <input
-            type='text'
-            id='manufacturer'
-            ref={(input) => {_manufacturer = input;}}/>
-        </div>
-        <div>
-          <label>Model</label>
-          <br/>
-          <input
-            type='text'
-            id='model'
-            ref={(input) => {_model = input;}}/>
-        </div>
-        <div>
-          <label>Country</label>
-          <br/>
-          <input
-            type='text'
-            id='country'
-            ref={(input) => {_country = input;}}/>
-        </div>
-        <div>
-          <label>Serial Number</label>
-          <br/>
-          <input
-            type='text'
-            id='serialNumber'
-            ref={(input) => {_serialNumber = input;}}/>
-        </div>
-        <div>
-          <label>Description</label>
-          <br/>
-          <textarea
-            type='text'
-            id='description'
-            ref={(input) => {_description = input;}}></textarea>
-        </div>
-        <div>
-          <label>Year</label>
-          <br/>
-          <input
-            type='number'
-            id='year'
-            ref={(input) => {_year = input;}}/>
-        </div>
-        <div>
-          <label>Image URL</label>
-          <br/>
-          <input
-            type='text'
-            id='imageUrl'
-            ref={(input) => {_imageUrl = input;}}/>
-        </div>
-        <div>
-          <label>Paid</label>
-          <br/>
-          <input
-            type='number'
-            id='paid'
-            ref={(input) => {_paid = input;}}/>
-        </div>
-        <div>
-          <label>Weight</label>
-          <br/>
-          <input
-            type='number'
-            id='weight'
-            ref={(input) => {_weight = input;}}/>
-        </div>
-        <div>
-          <label>type</label>
-          <br/>
-          <input
-            type='text'
-            id='type'
-            ref={(input) => {_type = input;}}/>
-        </div>
-        <div>
-          <label>width</label>
-          <br/>
-          <input
-            type='number'
-            id='width'
-            ref={(input) => {_width = input;}}/>
-        </div>
-        <div>
-          <label>depth</label>
-          <br/>
-          <input
-            type='number'
-            id='depth'
-            ref={(input) => {_depth = input;}}/>
-        </div>
-        <div>
-          <label>height</label>
-          <br/>
-          <input
-            type='number'
-            id='height'
-            ref={(input) => {_height = input;}}/>
-        </div>
-        <h2>Electronics</h2>
-        <hr/>
-        <div>
-          <label>power</label>
-          <br/>
-          <input
-            type='text'
-            id='power'
-            ref={(input) => {_power = input;}}/>
-        </div>
-        <div>
-          <label>electronics</label>
-          <br/>
-          <input
-            type='text'
-            id='electronics'
-            ref={(input) => {_electronics = input;}}/>
-        </div>
-        <div>
-          <label>True Bypass or Buffer?</label>
-          <br/>
-            <select id ='trueBypass' ref={(select) => {_trueBypass=select;}}>
-              <option value="true">True Bypass</option>
-              <option value="false">Buffered</option>
-            </select>
-        </div>
-        <div>
-          <label>inputImpedance</label>
-          <br/>
-          <input
-            type='number'
-            id='inputImpedance'
-            ref={(input) => {_inputImpedance = input;}}/>
-        </div>
-        <div>
-          <label>outputImpedance</label>
-          <br/>
-          <input
-            type='number'
-            id='outputImpedance'
-            ref={(input) => {_outputImpedance = input;}}/>
-        </div>
-        <div>
-          <label>currentDraw</label>
-          <br/>
-          <input
-            type='text'
-            id='currentDraw'
-            ref={(input) => {_currentDraw = input;}}/>
-        </div>
-        <div>
-          <label>controls</label>
-          <br/>
-          <input
-            type='text'
-            id='controls'
-            ref={(input) => {_controls = input;}}/>
-        </div>
-        <div>
-          <label>features</label>
-          <br/>
-          <input
-            type='text'
-            id='features'
-            ref={(input) => {_features = input;}}/>
+        <div className='left'>
+          <h2>General</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Manufacturer</label>
+                <br/>
+                <input
+                  type='text'
+                  id='manufacturer'
+                  ref={(input) => {_manufacturer = input;}}/>
+              </div>
+              <div>
+                <label>Model</label>
+                <br/>
+                <input
+                  type='text'
+                  id='model'
+                  ref={(input) => {_model = input;}}/>
+              </div>
+              <div>
+                <label>Country</label>
+                <br/>
+                <input
+                  type='text'
+                  id='country'
+                  ref={(input) => {_country = input;}}/>
+              </div>
+              <div>
+                <label>Serial Number</label>
+                <br/>
+                <input
+                  type='text'
+                  id='serialNumber'
+                  ref={(input) => {_serialNumber = input;}}/>
+              </div>
+              <div>
+                <label>Description</label>
+                <br/>
+                <textarea
+                  type='text'
+                  id='description'
+                  ref={(input) => {_description = input;}}></textarea>
+              </div>
+              <div>
+                <label>Year</label>
+                <br/>
+                <input
+                  type='number'
+                  id='year'
+                  ref={(input) => {_year = input;}}/>
+              </div>
+              <div>
+                <label>Image URL</label>
+                <br/>
+                <input
+                  type='text'
+                  id='imageUrl'
+                  ref={(input) => {_imageUrl = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Paid</label>
+                <br/>
+                <input
+                  type='number'
+                  id='paid'
+                  ref={(input) => {_paid = input;}}/>
+              </div>
+              <div>
+                <label>Weight</label>
+                <br/>
+                <input
+                  type='number'
+                  id='weight'
+                  ref={(input) => {_weight = input;}}/>
+              </div>
+              <div>
+                <label>type</label>
+                <br/>
+                <input
+                  type='text'
+                  id='type'
+                  ref={(input) => {_type = input;}}/>
+              </div>
+              <div>
+                <label>width</label>
+                <br/>
+                <input
+                  type='number'
+                  id='width'
+                  ref={(input) => {_width = input;}}/>
+              </div>
+              <div>
+                <label>depth</label>
+                <br/>
+                <input
+                  type='number'
+                  id='depth'
+                  ref={(input) => {_depth = input;}}/>
+              </div>
+              <div>
+                <label>height</label>
+                <br/>
+                <input
+                  type='number'
+                  id='height'
+                  ref={(input) => {_height = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Electronics</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>power</label>
+                <br/>
+                <input
+                  type='text'
+                  id='power'
+                  ref={(input) => {_power = input;}}/>
+              </div>
+              <div>
+                <label>electronics</label>
+                <br/>
+                <input
+                  type='text'
+                  id='electronics'
+                  ref={(input) => {_electronics = input;}}/>
+              </div>
+              <div>
+                <label>True Bypass or Buffer?</label>
+                <br/>
+                  <select id ='trueBypass' ref={(select) => {_trueBypass=select;}}>
+                    <option value="true">True Bypass</option>
+                    <option value="false">Buffered</option>
+                  </select>
+              </div>
+              <div>
+                <label>inputImpedance</label>
+                <br/>
+                <input
+                  type='number'
+                  id='inputImpedance'
+                  ref={(input) => {_inputImpedance = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>outputImpedance</label>
+                <br/>
+                <input
+                  type='number'
+                  id='outputImpedance'
+                  ref={(input) => {_outputImpedance = input;}}/>
+              </div>
+              <div>
+                <label>currentDraw</label>
+                <br/>
+                <input
+                  type='text'
+                  id='currentDraw'
+                  ref={(input) => {_currentDraw = input;}}/>
+              </div>
+              <div>
+                <label>controls</label>
+                <br/>
+                <input
+                  type='text'
+                  id='controls'
+                  ref={(input) => {_controls = input;}}/>
+              </div>
+              <div>
+                <label>features</label>
+                <br/>
+                <input
+                  type='text'
+                  id='features'
+                  ref={(input) => {_features = input;}}/>
+              </div>
+            </div>
+          </div>          
         </div>
         <br/>
         <button type='submit'>Add Pedal</button>

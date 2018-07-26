@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchNewGuitar} from './../actions';
+import './styles/Form.css';
 
 function NewGuitarForm(props) {
   let _manufacturer = null;
@@ -98,7 +99,7 @@ function NewGuitarForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Add A New Guitar</h2>
       <form onSubmit={handleClick}>
         <div>

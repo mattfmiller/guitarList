@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchEditPedal} from './../actions';
+import './styles/Form.css';
 
 function EditPedalForm(props) {
   let selectedPedal;
@@ -74,7 +75,7 @@ function EditPedalForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Edit {selectedPedal.manufacturer} {selectedPedal.model}</h2>
       <form onSubmit={handleClick}>
         <div>

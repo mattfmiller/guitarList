@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchNewPedal} from './../actions';
+import './styles/Form.css';
 
 function NewPedalForm(props) {
   let _manufacturer = null;
@@ -60,7 +61,7 @@ function NewPedalForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Add A New Pedal</h2>
       <form onSubmit={handleClick}>
         <div>

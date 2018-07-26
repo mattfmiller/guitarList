@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchNewAmp} from './../actions';
+import './styles/Form.css';
 
 function NewAmpForm(props) {
   let _manufacturer = null;
@@ -84,7 +85,7 @@ function NewAmpForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Add A New Amp</h2>
       <form onSubmit={handleClick}>
         <div>

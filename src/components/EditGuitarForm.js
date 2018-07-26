@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchEditGuitar} from './../actions';
+import './styles/Form.css';
 
 function EditGuitarForm(props) {
   let selectedGuitar;
@@ -112,7 +113,7 @@ function EditGuitarForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Edit {selectedGuitar.manufacturer} {selectedGuitar.model}:</h2>
       <form onSubmit={handleClick}>
         <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import {fetchEditAmp} from './../actions';
+import './styles/Form.css';
 
 function EditAmpForm(props) {
   let selectedAmp;
@@ -98,7 +99,7 @@ function EditAmpForm(props) {
   }
 
   return(
-    <div>
+    <div className='box'>
       <h2>Edit {selectedAmp.manufacturer} {selectedAmp.model}</h2>
       <form onSubmit={handleClick}>
         <div>

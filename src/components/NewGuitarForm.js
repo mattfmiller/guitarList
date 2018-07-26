@@ -110,6 +110,8 @@ function NewGuitarForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
+        <h2>General</h2>
+        <hr/>
         <div>
           <label>Manufacturer</label>
           <br/>

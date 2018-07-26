@@ -110,6 +110,8 @@ function EditAmpForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
+        <h2>General</h2>
+        <hr/>
         <div>
           <label>Manufacturer</label>
           <br/>
@@ -209,15 +211,8 @@ function EditAmpForm(props) {
             defaultValue={selectedAmp.type}
             ref={(input) => {_type = input;}}/>
         </div>
-        <div>
-          <label>power</label>
-          <br/>
-          <input
-            type='number'
-            id='power'
-            defaultValue={selectedAmp.power}
-            ref={(input) => {_power = input;}}/>
-        </div>
+        <h2>Hardware</h2>
+        <hr/>
         <div>
           <label>cabinetWood</label>
           <br/>
@@ -271,60 +266,6 @@ function EditAmpForm(props) {
             id='height'
             defaultValue={selectedAmp.height}
             ref={(input) => {_height = input;}}/>
-        </div>
-        <div>
-          <label>electronics</label>
-          <br/>
-          <input
-            type='text'
-            id='electronics'
-            defaultValue={selectedAmp.electronics}
-            ref={(input) => {_electronics = input;}}/>
-        </div>
-        <div>
-          <label>speakers</label>
-          <br/>
-          <input
-            type='text'
-            id='speakers'
-            defaultValue={selectedAmp.speakers}
-            ref={(input) => {_speakers = input;}}/>
-        </div>
-        <div>
-          <label>Tubes</label>
-          <br/>
-          <input
-            type='text'
-            id='tubes'
-            defaultValue={selectedAmp.tubes}
-            ref={(input) => {_tubes = input;}}/>
-        </div>
-        <div>
-          <label>Reverb</label>
-          <br/>
-            <input
-              type='text'
-              id='reverb'
-              defaultValue={selectedAmp.reverb}
-              ref={(input) => {_reverb = input;}}/>
-        </div>
-        <div>
-          <label>Tremolo</label>
-          <br/>
-            <input
-              type='text'
-              id='tremolo'
-              defaultValue={selectedAmp.tremolo}
-              ref={(input) => {_tremolo = input;}}/>
-        </div>
-        <div>
-          <label>externalSpeaker</label>
-          <br/>
-          <input
-            type='text'
-            id='externalSpeaker'
-            defaultValue={selectedAmp.externalSpeaker}
-            ref={(input) => {_externalSpeaker = input;}}/>
         </div>
         <div>
           <label>handle</label>
@@ -389,6 +330,71 @@ function EditAmpForm(props) {
             defaultValue={selectedAmp.feet}
             ref={(input) => {_feet = input;}}/>
         </div>
+        <h2>Electronics</h2>
+        <hr/>
+        <div>
+          <label>electronics</label>
+          <br/>
+          <input
+            type='text'
+            id='electronics'
+            defaultValue={selectedAmp.electronics}
+            ref={(input) => {_electronics = input;}}/>
+        </div>
+        <div>
+          <label>power</label>
+          <br/>
+          <input
+            type='number'
+            id='power'
+            defaultValue={selectedAmp.power}
+            ref={(input) => {_power = input;}}/>
+        </div>
+        <div>
+          <label>speakers</label>
+          <br/>
+          <input
+            type='text'
+            id='speakers'
+            defaultValue={selectedAmp.speakers}
+            ref={(input) => {_speakers = input;}}/>
+        </div>
+        <div>
+          <label>Tubes</label>
+          <br/>
+          <input
+            type='text'
+            id='tubes'
+            defaultValue={selectedAmp.tubes}
+            ref={(input) => {_tubes = input;}}/>
+        </div>
+        <div>
+          <label>Reverb</label>
+          <br/>
+            <input
+              type='text'
+              id='reverb'
+              defaultValue={selectedAmp.reverb}
+              ref={(input) => {_reverb = input;}}/>
+        </div>
+        <div>
+          <label>Tremolo</label>
+          <br/>
+            <input
+              type='text'
+              id='tremolo'
+              defaultValue={selectedAmp.tremolo}
+              ref={(input) => {_tremolo = input;}}/>
+        </div>
+        <div>
+          <label>externalSpeaker</label>
+          <br/>
+          <input
+            type='text'
+            id='externalSpeaker'
+            defaultValue={selectedAmp.externalSpeaker}
+            ref={(input) => {_externalSpeaker = input;}}/>
+        </div>
         <div>
           <label>controls</label>
           <br/>
@@ -398,6 +404,8 @@ function EditAmpForm(props) {
             defaultValue={selectedAmp.controls}
             ref={(input) => {_controls = input;}}/>
         </div>
+        <h2>Acessories</h2>
+        <hr/>
         <div>
           <label>cover</label>
           <br/>
@@ -408,7 +416,7 @@ function EditAmpForm(props) {
             ref={(input) => {_cover = input;}}/>
         </div>
         <br/>
-        <button type='submit'>Add Amp</button>
+        <button type='submit'>Edit Amp</button>
       </form>
     </div>
   );

@@ -495,7 +495,7 @@ function EditGuitarForm(props) {
             ref={(input) => {_guitarCase = input;}}/>
         </div>
         <br/>
-        <button type='submit'>+Guitar</button>
+        <button type='submit'>Edit Guitar</button>
       </form>
     </div>
   );

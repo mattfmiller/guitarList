@@ -96,6 +96,8 @@ function NewAmpForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
+        <h2>General</h2>
+        <hr/>
         <div>
           <label>Manufacturer</label>
           <br/>
@@ -184,14 +186,8 @@ function NewAmpForm(props) {
             id='type'
             ref={(input) => {_type = input;}}/>
         </div>
-        <div>
-          <label>power</label>
-          <br/>
-          <input
-            type='number'
-            id='power'
-            ref={(input) => {_power = input;}}/>
-        </div>
+        <h2>Hardware</h2>
+        <hr/>
         <div>
           <label>cabinetWood</label>
           <br/>
@@ -239,54 +235,6 @@ function NewAmpForm(props) {
             type='number'
             id='height'
             ref={(input) => {_height = input;}}/>
-        </div>
-        <div>
-          <label>electronics</label>
-          <br/>
-          <input
-            type='text'
-            id='electronics'
-            ref={(input) => {_electronics = input;}}/>
-        </div>
-        <div>
-          <label>speakers</label>
-          <br/>
-          <input
-            type='text'
-            id='speakers'
-            ref={(input) => {_speakers = input;}}/>
-        </div>
-        <div>
-          <label>Tubes</label>
-          <br/>
-          <input
-            type='text'
-            id='tubes'
-            ref={(input) => {_tubes = input;}}/>
-        </div>
-        <div>
-          <label>Reverb</label>
-          <br/>
-            <input
-              type='text'
-              id='reverb'
-              ref={(input) => {_reverb = input;}}/>
-        </div>
-        <div>
-          <label>Tremolo</label>
-          <br/>
-            <input
-              type='text'
-              id='tremolo'
-              ref={(input) => {_tremolo = input;}}/>
-        </div>
-        <div>
-          <label>externalSpeaker</label>
-          <br/>
-          <input
-            type='text'
-            id='externalSpeaker'
-            ref={(input) => {_externalSpeaker = input;}}/>
         </div>
         <div>
           <label>handle</label>
@@ -344,6 +292,64 @@ function NewAmpForm(props) {
             id='feet'
             ref={(input) => {_feet = input;}}/>
         </div>
+        <h2>Electronics</h2>
+        <hr/>
+        <div>
+          <label>electronics</label>
+          <br/>
+          <input
+            type='text'
+            id='electronics'
+            ref={(input) => {_electronics = input;}}/>
+        </div>
+        <div>
+          <label>power</label>
+          <br/>
+          <input
+            type='number'
+            id='power'
+            ref={(input) => {_power = input;}}/>
+        </div>
+        <div>
+          <label>speakers</label>
+          <br/>
+          <input
+            type='text'
+            id='speakers'
+            ref={(input) => {_speakers = input;}}/>
+        </div>
+        <div>
+          <label>Tubes</label>
+          <br/>
+          <input
+            type='text'
+            id='tubes'
+            ref={(input) => {_tubes = input;}}/>
+        </div>
+        <div>
+          <label>Reverb</label>
+          <br/>
+            <input
+              type='text'
+              id='reverb'
+              ref={(input) => {_reverb = input;}}/>
+        </div>
+        <div>
+          <label>Tremolo</label>
+          <br/>
+            <input
+              type='text'
+              id='tremolo'
+              ref={(input) => {_tremolo = input;}}/>
+        </div>
+        <div>
+          <label>externalSpeaker</label>
+          <br/>
+          <input
+            type='text'
+            id='externalSpeaker'
+            ref={(input) => {_externalSpeaker = input;}}/>
+        </div>
         <div>
           <label>controls</label>
           <br/>
@@ -352,6 +358,8 @@ function NewAmpForm(props) {
             id='controls'
             ref={(input) => {_controls = input;}}/>
         </div>
+        <h2>Acessories</h2>
+        <hr/>
         <div>
           <label>cover</label>
           <br/>

@@ -86,6 +86,8 @@ function EditPedalForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
+        <h2>General</h2>
+        <hr/>
         <div>
           <label>Manufacturer</label>
           <br/>
@@ -177,15 +179,6 @@ function EditPedalForm(props) {
             ref={(input) => {_type = input;}}/>
         </div>
         <div>
-          <label>power</label>
-          <br/>
-          <input
-            type='text'
-            id='power'
-            defaultValue={selectedPedal.power}
-            ref={(input) => {_power = input;}}/>
-        </div>
-        <div>
           <label>width</label>
           <br/>
           <input
@@ -211,6 +204,17 @@ function EditPedalForm(props) {
             id='height'
             defaultValue={selectedPedal.height}
             ref={(input) => {_height = input;}}/>
+        </div>
+        <h2>Electronics</h2>
+        <hr/>
+        <div>
+          <label>power</label>
+          <br/>
+          <input
+            type='text'
+            id='power'
+            defaultValue={selectedPedal.power}
+            ref={(input) => {_power = input;}}/>
         </div>
         <div>
           <label>electronics</label>
@@ -275,7 +279,7 @@ function EditPedalForm(props) {
             ref={(input) => {_features = input;}}/>
         </div>
         <br/>
-        <button type='submit'>Add Pedal</button>
+        <button type='submit'>Edit Pedal</button>
       </form>
     </div>
   );

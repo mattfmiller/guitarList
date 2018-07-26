@@ -72,6 +72,8 @@ function NewPedalForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
+        <h2>General</h2>
+        <hr/>
         <div>
           <label>Manufacturer</label>
           <br/>
@@ -153,14 +155,6 @@ function NewPedalForm(props) {
             ref={(input) => {_type = input;}}/>
         </div>
         <div>
-          <label>power</label>
-          <br/>
-          <input
-            type='text'
-            id='power'
-            ref={(input) => {_power = input;}}/>
-        </div>
-        <div>
           <label>width</label>
           <br/>
           <input
@@ -183,6 +177,16 @@ function NewPedalForm(props) {
             type='number'
             id='height'
             ref={(input) => {_height = input;}}/>
+        </div>
+        <h2>Electronics</h2>
+        <hr/>
+        <div>
+          <label>power</label>
+          <br/>
+          <input
+            type='text'
+            id='power'
+            ref={(input) => {_power = input;}}/>
         </div>
         <div>
           <label>electronics</label>

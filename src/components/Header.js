@@ -62,7 +62,7 @@ function Header() {
             type='text'
             id='queryTerm'
             ref={(input) => {_queryTerm = input;}}/>
-            <button type='submit'>Search</button>
+          <button type='submit' id='search-button'></button>
           </form>
         </div>
       </header>

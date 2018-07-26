@@ -71,14 +71,14 @@ function AmpSpecs(props) {
         <hr/>
         <div className='columns'>
           <div>
-            <h3><strong>Internal Wiring:</strong> {selectedAmp.electronics}</h3>
+            <h3><strong>Circuit:</strong> {selectedAmp.electronics}</h3>
             <h3><strong>Tubes:</strong> {selectedAmp.tubes}</h3>
-            <h3><strong>externalSpeaker Jack:</strong> {selectedAmp.externalSpeaker}</h3>
+            <h3><strong>External Speaker Jack:</strong> {selectedAmp.externalSpeaker}</h3>
           </div>
           <div>
             <h3><strong>Speakers:</strong> {selectedAmp.speakers}</h3>
             <h3><strong>Reverb:</strong> {selectedAmp.reverb}</h3>
-            <h3><strong>Tremoolo:</strong> {selectedAmp.tremolo}</h3>
+            <h3><strong>Tremolo:</strong> {selectedAmp.tremolo}</h3>
           </div>
         </div>
       </div>
@@ -132,14 +132,14 @@ function AmpSpecs(props) {
           <hr/>
           <div className='columns'>
             <div>
-              <h3><strong>Internal Wiring:</strong> {selectedAmp.electronics}</h3>
+              <h3><strong>Circuit:</strong> {selectedAmp.electronics}</h3>
               <h3><strong>Tubes:</strong> {selectedAmp.tubes}</h3>
-              <h3><strong>externalSpeaker Jack:</strong> {selectedAmp.externalSpeaker}</h3>
+              <h3><strong>External Speaker Jack:</strong> {selectedAmp.externalSpeaker}</h3>
             </div>
             <div>
               <h3><strong>Speakers:</strong> {selectedAmp.speakers}</h3>
               <h3><strong>Reverb:</strong> {selectedAmp.reverb}</h3>
-              <h3><strong>Tremoolo:</strong> {selectedAmp.tremolo}</h3>
+              <h3><strong>Tremolo:</strong> {selectedAmp.tremolo}</h3>
             </div>
           </div>
           <br/>

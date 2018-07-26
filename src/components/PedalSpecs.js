@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
+import {fetchDeletePedal} from './../actions';
 
 function PedalSpecs(props) {
   let optionalContent;
@@ -22,6 +23,13 @@ function PedalSpecs(props) {
   });}
 
   let editPath = '/pedals/' + props.selectedPedalId + '/edit';
+
+  function handleDelete() {
+    let deleteConfirm = window.confirm('Delete Pedal?');
+    if (deleteConfirm === true) {
+      props.dispatch(fetchDeletePedal(selectedPedal.id));
+    }
+  }
 
   return(
     <div className='box'>
@@ -75,6 +83,7 @@ function PedalSpecs(props) {
       </div>
       <br/>
       <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
     </div>
   );
 }

@@ -3,8 +3,10 @@ import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 import './styles/InstrumentSpecs.css';
+import {fetchDeleteGuitar} from './../actions';
 
 function GuitarSpecs(props) {
+
   let optionalContent;
   let selectedGuitar;
   // if (props.guitarsInCollection.length === 0) return (<h1>loading...</h1>);
@@ -185,11 +187,19 @@ function GuitarSpecs(props) {
     </div>
   }
 
+  function handleDelete() {
+    let deleteConfirm = window.confirm('Delete Guitar?');
+    if (deleteConfirm === true) {
+      props.dispatch(fetchDeleteGuitar(selectedGuitar.id));
+    }
+  }
+
   return(
     <div className='box'>
       {optionalContent}
       <br/>
       <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
     </div>
   );
 }

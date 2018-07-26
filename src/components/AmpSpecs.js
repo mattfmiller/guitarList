@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
+import {fetchDeleteAmp} from './../actions';
 
 function AmpSpecs(props) {
   let optionalContent;
@@ -154,11 +155,19 @@ function AmpSpecs(props) {
     </div>
   }
 
+  function handleDelete() {
+    let deleteConfirm = window.confirm('Delete Amp?');
+    if (deleteConfirm === true) {
+      props.dispatch(fetchDeleteAmp(selectedAmp.id));
+    }
+  }
+
   return(
     <div className='box'>
       {optionalContent}
       <br/>
       <Link style={{textDecoration: 'none', color: 'black'}} to={editPath}><h3><strong>Edit</strong></h3></Link>
+      <h3 onClick={handleDelete}><strong>Delete</strong></h3>
     </div>
   );
 }

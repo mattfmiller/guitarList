@@ -290,3 +290,48 @@ export function fetchPedalsBySearch(queryTerm) {
     });
   };
 }
+
+export function fetchDeleteGuitar(id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/guitars/' + id + '/delete', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'}
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchGuitarsInCollection();
+      window.location.replace('http://localhost:3000/guitars');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}
+
+export function fetchDeleteAmp(id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/amps/' + id + '/delete', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'}
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchAmpsInCollection();
+      window.location.replace('http://localhost:3000/amps');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}
+
+export function fetchDeletePedal(id) {
+  return function (dispatch){
+    return fetch('https://equiplist.herokuapp.com/pedals/' + id + '/delete', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'}
+    }).then(function(data) {
+      console.log('Request success: ', data);
+      fetchPedalsInCollection();
+      window.location.replace('http://localhost:3000/pedals');
+    }).catch(function (error) {
+      console.log('Request failure: ', error);
+    });
+  };
+}

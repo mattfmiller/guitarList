@@ -20,6 +20,7 @@ function Recent(props) {
           <RecentAmps />
         </div>
         <br/>
+        <br/>
         <hr/>
         <h1>RECENT PEDALS:</h1>
         <div className='container'>

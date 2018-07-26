@@ -39,6 +39,7 @@ class Search extends Component {
             <SearchAmps />
           </div>
           <br/>
+          <br/>
           <hr/>
           <h1>PEDALS:</h1>
           <div className='container'>

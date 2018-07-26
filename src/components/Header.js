@@ -23,12 +23,15 @@ function Header() {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">guitarList</h1>
         </div></Link>
-        <div>
-          <img src={guitarIcon} alt="icon" className="instrument-logo" />
-          <ul>
+      <div className='guitar-dropdown'>
+          <div className='guitar-dropbtn'>
+            <img src={guitarIcon} alt="icon" className="instrument-logo"/>
+            <h3>GUITARS</h3>
+          </div>
+          <ul className='guitar-dropdown-content'>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars'><li>GUITAR COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/wishlist'><li>GUITAR WISHLIST</li></Link>
-            <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/new'><li> + ADD A GUITAR</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/new'><li>ADD A GUITAR</li></Link>
           </ul>
         </div>
         <div>

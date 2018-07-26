@@ -26,7 +26,7 @@ function AmpSpecs(props) {
 
   if (selectedAmp.wishlist) {
     optionalContent =
-    <div>
+    <div className='content'>
       <Link style={{textDecoration: 'none', color: 'black'}} to='/amps/wishlist'><h4 className='floatRight'><strong>Wishlist</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedAmp.instrument} Amplifier</strong></h4>
       <h1>{selectedAmp.manufacturer} - {selectedAmp.model}</h1>
@@ -86,7 +86,7 @@ function AmpSpecs(props) {
     </div>
   } else {
     optionalContent =
-    <div>
+    <div className='content'>
       <Link style={{textDecoration: 'none', color: 'black'}} to='/amps'><h4 className='floatRight'><strong>Collection</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedAmp.instrument} Amplifier</strong></h4>
       <h1>{selectedAmp.manufacturer} - {selectedAmp.model}</h1>

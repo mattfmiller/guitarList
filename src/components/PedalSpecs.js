@@ -39,7 +39,7 @@ function PedalSpecs(props) {
 
   return(
     <div className='box'>
-      <div>
+      <div className='content'>
         {optionalContent}
         <h4 className='floatLeft'><strong>{selectedPedal.type} Pedal</strong></h4>
         <h1>{selectedPedal.manufacturer} - {selectedPedal.model}</h1>

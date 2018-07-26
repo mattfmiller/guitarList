@@ -27,8 +27,6 @@
 }
 
 .box img {
-  max-height:600px;
-  max-width:1300px;
   height:auto;
   width:auto;
   margin-bottom: 40px;
@@ -49,4 +47,9 @@
 
 .edit-delete h3:hover {
   cursor: pointer;
+}
+
+.content img{
+  max-height:600px;
+  max-width:1300px;
 }

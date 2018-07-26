@@ -27,7 +27,7 @@ function GuitarSpecs(props) {
 
   if (selectedGuitar.wishlist) {
     optionalContent =
-    <div>
+    <div className='content'>
       <Link style={{textDecoration: 'none', color: 'black'}} to='/guitars/wishlist'><h4 className='floatRight'><strong>Wishlist</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
       <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>
@@ -102,7 +102,7 @@ function GuitarSpecs(props) {
     </div>
   } else {
     optionalContent =
-    <div>
+    <div className='content'>
       <Link style={{textDecoration: 'none', color: 'black'}} to='/guitars'><h4 className='floatRight'><strong>Collection</strong></h4></Link>
       <h4 className='floatLeft'><strong>{selectedGuitar.type} Guitar</strong></h4>
       <h1>{selectedGuitar.manufacturer} - {selectedGuitar.model}</h1>

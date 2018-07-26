@@ -58,7 +58,51 @@ ul {
 
 .guitar-dropdown:hover .guitar-dropdown-content {display: block;}
 
+.amp-dropdown-content {
+    display: none;
+    text-align: left;
+    position: absolute;
+    background-color: #222;
+    padding: 0;
+    margin: 0;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
+.amp-dropdown-content li {
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.amp-dropdown-content li:hover {background-color: grey;}
+
+.amp-dropdown:hover .amp-dropdown-content {display: block;}
+
+.pedal-dropdown-content {
+    display: none;
+    text-align: left;
+    position: absolute;
+    background-color: #222;
+    padding: 0;
+    margin: 0;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.pedal-dropdown-content li {
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.pedal-dropdown-content li:hover {background-color: grey;}
+
+.pedal-dropdown:hover .pedal-dropdown-content {display: block;}
 
 
 @keyframes App-logo-spin {

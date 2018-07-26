@@ -34,20 +34,26 @@ function Header() {
             <Link style={{textDecoration: 'none', color: 'white'}} to='/guitars/new'><li>ADD A GUITAR</li></Link>
           </ul>
         </div>
-        <div>
-          <img src={ampIcon} alt="icon" className="instrument-logo" />
-          <ul>
+        <div className='amp-dropdown'>
+          <div className='amp-dropbtn'>
+            <img src={ampIcon} alt="icon" className="instrument-logo" />
+            <h3>AMPS</h3>
+          </div>
+          <ul className='amp-dropdown-content'>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/amps'><li>AMP COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/wishlist'><li>AMP WISHLIST</li></Link>
-            <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/new'><li> + ADD AN AMP</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/amps/new'><li>ADD AN AMP</li></Link>
           </ul>
         </div>
-        <div>
-          <img src={pedalIcon} alt="icon" className="instrument-logo" />
-          <ul>
+        <div className='pedal-dropdown'>
+          <div className='pedal-dropbtn'>
+            <img src={pedalIcon} alt="icon" className="instrument-logo" />
+            <h3>PEDALS</h3>
+          </div>
+          <ul className='pedal-dropdown-content'>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals'><li>PEDAL COLLECTION</li></Link>
             <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/wishlist'><li>PEDAL WISHLIST</li></Link>
-            <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/new'><li> + ADD A PEDAL</li></Link>
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/pedals/new'><li>ADD A PEDAL</li></Link>
           </ul>
         </div>
         <div>

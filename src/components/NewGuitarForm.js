@@ -110,343 +110,375 @@ function NewGuitarForm(props) {
             <option value="true">Wishlist</option>
           </select>
         </div>
-        <h2>General</h2>
-        <hr/>
-        <div>
-          <label>Manufacturer</label>
+        <div className='left'>
+          <h2>General</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Manufacturer</label>
+                <br/>
+                <input
+                  type='text'
+                  id='manufacturer'
+                  ref={(input) => {_manufacturer = input;}}/>
+              </div>
+              <div>
+                <label>Model</label>
+                <br/>
+                <input
+                  type='text'
+                  id='model'
+                  ref={(input) => {_model = input;}}/>
+              </div>
+              <div>
+                <label>Country</label>
+                <br/>
+                <input
+                  type='text'
+                  id='country'
+                  ref={(input) => {_country = input;}}/>
+              </div>
+              <div>
+                <label>Serial Number</label>
+                <br/>
+                <input
+                  type='text'
+                  id='serialNumber'
+                  ref={(input) => {_serialNumber = input;}}/>
+              </div>
+              <div>
+                <label>Description</label>
+                <br/>
+                <textarea
+                  type='text'
+                  id='description'
+                  ref={(input) => {_description = input;}}></textarea>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Year</label>
+                <br/>
+                <input
+                  type='number'
+                  id='year'
+                  ref={(input) => {_year = input;}}/>
+              </div>
+              <div>
+                <label>Image URL</label>
+                <br/>
+                <input
+                  type='text'
+                  id='imageUrl'
+                  ref={(input) => {_imageUrl = input;}}/>
+              </div>
+              <div>
+                <label>Paid</label>
+                <br/>
+                <input
+                  type='number'
+                  step='0.01'
+                  id='paid'
+                  ref={(input) => {_paid = input;}}/>
+              </div>
+              <div>
+                <label>Type of Guitar</label>
+                <br/>
+                <input
+                  type='text'
+                  id='type'
+                  ref={(input) => {_type = input;}}/>
+              </div>
+              <div>
+                <label>Weight</label>
+                <br/>
+                <input
+                  type='number'
+                  step='0.01'
+                  id='weight'
+                  ref={(input) => {_weight = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Body</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Wood</label>
+                <br/>
+                <input
+                  type='text'
+                  id='bodyWood'
+                  ref={(input) => {_bodyWood = input;}}/>
+              </div>
+              <div>
+                <label>Finish</label>
+                <br/>
+                <input
+                  type='text'
+                  id='finish'
+                  ref={(input) => {_finish = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Color</label>
+                <br/>
+                <input
+                  type='text'
+                  id='color'
+                  ref={(input) => {_color = input;}}/>
+              </div>
+              <div>
+                <label>Binding</label>
+                <br/>
+                <input
+                  type='text'
+                  id='binding'
+                  ref={(input) => {_binding = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Neck</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Wood</label>
+                <br/>
+                <input
+                  type='text'
+                  id='neckWood'
+                  ref={(input) => {_neckWood = input;}}/>
+              </div>
+              <div>
+                <label>Neck Type</label>
+                <br/>
+                <input
+                  type='text'
+                  id='neckType'
+                  ref={(input) => {_neckType = input;}}/>
+              </div>
+              <div>
+                <label>Neck Profile</label>
+                <br/>
+                <input
+                  type='text'
+                  id='neckProfile'
+                  ref={(input) => {_neckProfile = input;}}/>
+              </div>
+              <div>
+                <label>Fretboard Material</label>
+                <br/>
+                <input
+                  type='text'
+                  id='fretboardWood'
+                  ref={(input) => {_fretboardWood = input;}}/>
+              </div>
+              <div>
+                <label>Fretboard Radius</label>
+                <br/>
+                <input
+                  type='number'
+                  step='0.01'
+                  id='fretboardRadius'
+                  ref={(input) => {_fretboardRadius = input;}}/>
+              </div>
+              <div>
+                <label>Number of Frets</label>
+                <br/>
+                <input
+                  type='number'
+                  id='frets'
+                  ref={(input) => {_frets = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Fret Material</label>
+                <br/>
+                <input
+                  type='text'
+                  id='fretMaterial'
+                  ref={(input) => {_fretMaterial = input;}}/>
+              </div>
+              <div>
+                <label>Inlays</label>
+                <br/>
+                <input
+                  type='text'
+                  id='inlays'
+                  ref={(input) => {_inlays = input;}}/>
+              </div>
+              <div>
+                <label>Nut Material</label>
+                <br/>
+                <input
+                  type='text'
+                  id='nutMaterial'
+                  ref={(input) => {_nutMaterial = input;}}/>
+              </div>
+              <div>
+                <label>Nut Width</label>
+                <br/>
+                <input
+                  type='number'
+                  id='nutWidth'
+                  ref={(input) => {_nutWidth = input;}}/>
+              </div>
+              <div>
+                <label>Scale Length</label>
+                <br/>
+                <input
+                  type='number'
+                  step='0.01'
+                  id='scaleLength'
+                  ref={(input) => {_scaleLength = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Electronics</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Neck Pickup</label>
+                <br/>
+                <input
+                  type='text'
+                  id='neckPickup'
+                  ref={(input) => {_neckPickup = input;}}/>
+              </div>
+              <div>
+                <label>Middle Pickup</label>
+                <br/>
+                <input
+                  type='text'
+                  id='middlePickup'
+                  ref={(input) => {_middlePickup = input;}}/>
+              </div>
+              <div>
+                <label>Bridge Pickup</label>
+                <br/>
+                <input
+                  type='text'
+                  id='bridgePickup'
+                  ref={(input) => {_bridgePickup = input;}}/>
+              </div>
+              <div>
+                <label>Volume Pot(s)</label>
+                <br/>
+                <input
+                  type='text'
+                  id='volumePots'
+                  ref={(input) => {_volumePots = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Tone Pot(s)</label>
+                <br/>
+                <input
+                  type='text'
+                  id='tonePots'
+                  ref={(input) => {_tonePots = input;}}/>
+              </div>
+              <div>
+                <label>Capacitor</label>
+                <br/>
+                <input
+                  type='text'
+                  id='capacitor'
+                  ref={(input) => {_capacitor = input;}}/>
+              </div>
+              <div>
+                <label>Controls</label>
+                <br/>
+                <input
+                  type='text'
+                  id='controls'
+                  ref={(input) => {_controls = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Hardware</h2>
+          <hr/>
+          <div className='columns'>
+            <div>
+              <div>
+                <label>Tuning Machines</label>
+                <br/>
+                <input
+                  type='text'
+                  id='tuners'
+                  ref={(input) => {_tuners = input;}}/>
+              </div>
+              <div>
+                <label>Tuner Buttons</label>
+                <br/>
+                <input
+                  type='text'
+                  id='tunerButtons'
+                  ref={(input) => {_tunerButtons = input;}}/>
+              </div>
+              <div>
+                <label>Bridge</label>
+                <br/>
+                <input
+                  type='text'
+                  id='bridge'
+                  ref={(input) => {_bridge = input;}}/>
+              </div>
+              <div>
+                <label>Tailpiece</label>
+                <br/>
+                <input
+                  type='text'
+                  id='tailpiece'
+                  ref={(input) => {_tailpiece = input;}}/>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Switch</label>
+                <br/>
+                <input
+                  type='text'
+                  id='guitarSwitch'
+                  ref={(input) => {_guitarSwitch = input;}}/>
+              </div>
+              <div>
+                <label>Knobs</label>
+                <br/>
+                <input
+                  type='text'
+                  id='knobs'
+                  ref={(input) => {_knobs = input;}}/>
+              </div>
+              <div>
+                <label>Pickguard</label>
+                <br/>
+                <input
+                  type='text'
+                  id='pickguard'
+                  ref={(input) => {_pickguard = input;}}/>
+              </div>
+            </div>
+          </div>
+          <h2>Accessories</h2>
+          <hr/>
+          <div>
+            <label>Guitar Case</label>
+            <br/>
+            <input
+              type='text'
+              id='guitarCase'
+              ref={(input) => {_guitarCase = input;}}/>
+          </div>
           <br/>
-          <input
-            type='text'
-            id='manufacturer'
-            ref={(input) => {_manufacturer = input;}}/>
         </div>
-        <div>
-          <label>Model</label>
-          <br/>
-          <input
-            type='text'
-            id='model'
-            ref={(input) => {_model = input;}}/>
-        </div>
-        <div>
-          <label>Country</label>
-          <br/>
-          <input
-            type='text'
-            id='country'
-            ref={(input) => {_country = input;}}/>
-        </div>
-        <div>
-          <label>Serial Number</label>
-          <br/>
-          <input
-            type='text'
-            id='serialNumber'
-            ref={(input) => {_serialNumber = input;}}/>
-        </div>
-        <div>
-          <label>Description</label>
-          <br/>
-          <textarea
-            type='text'
-            id='description'
-            ref={(input) => {_description = input;}}></textarea>
-        </div>
-        <div>
-          <label>Year</label>
-          <br/>
-          <input
-            type='number'
-            id='year'
-            ref={(input) => {_year = input;}}/>
-        </div>
-        <div>
-          <label>Image URL</label>
-          <br/>
-          <input
-            type='text'
-            id='imageUrl'
-            ref={(input) => {_imageUrl = input;}}/>
-        </div>
-        <div>
-          <label>Paid</label>
-          <br/>
-          <input
-            type='number'
-            step='0.01'
-            id='paid'
-            ref={(input) => {_paid = input;}}/>
-        </div>
-        <div>
-          <label>Type of Guitar</label>
-          <br/>
-          <input
-            type='text'
-            id='type'
-            ref={(input) => {_type = input;}}/>
-        </div>
-        <div>
-          <label>Weight</label>
-          <br/>
-          <input
-            type='number'
-            step='0.01'
-            id='weight'
-            ref={(input) => {_weight = input;}}/>
-        </div>
-        <h2>Body</h2>
-        <hr/>
-        <div>
-          <label>Wood</label>
-          <br/>
-          <input
-            type='text'
-            id='bodyWood'
-            ref={(input) => {_bodyWood = input;}}/>
-        </div>
-        <div>
-          <label>Finish</label>
-          <br/>
-          <input
-            type='text'
-            id='finish'
-            ref={(input) => {_finish = input;}}/>
-        </div>
-        <div>
-          <label>Color</label>
-          <br/>
-          <input
-            type='text'
-            id='color'
-            ref={(input) => {_color = input;}}/>
-        </div>
-        <div>
-          <label>Binding</label>
-          <br/>
-          <input
-            type='text'
-            id='binding'
-            ref={(input) => {_binding = input;}}/>
-        </div>
-        <h2>Neck</h2>
-        <hr/>
-        <div>
-          <label>Wood</label>
-          <br/>
-          <input
-            type='text'
-            id='neckWood'
-            ref={(input) => {_neckWood = input;}}/>
-        </div>
-        <div>
-          <label>Neck Type</label>
-          <br/>
-          <input
-            type='text'
-            id='neckType'
-            ref={(input) => {_neckType = input;}}/>
-        </div>
-        <div>
-          <label>Neck Profile</label>
-          <br/>
-          <input
-            type='text'
-            id='neckProfile'
-            ref={(input) => {_neckProfile = input;}}/>
-        </div>
-        <div>
-          <label>Fretboard Material</label>
-          <br/>
-          <input
-            type='text'
-            id='fretboardWood'
-            ref={(input) => {_fretboardWood = input;}}/>
-        </div>
-        <div>
-          <label>Fretboard Radius</label>
-          <br/>
-          <input
-            type='number'
-            step='0.01'
-            id='fretboardRadius'
-            ref={(input) => {_fretboardRadius = input;}}/>
-        </div>
-        <div>
-          <label>Number of Frets</label>
-          <br/>
-          <input
-            type='number'
-            id='frets'
-            ref={(input) => {_frets = input;}}/>
-        </div>
-        <div>
-          <label>Fret Material</label>
-          <br/>
-          <input
-            type='text'
-            id='fretMaterial'
-            ref={(input) => {_fretMaterial = input;}}/>
-        </div>
-        <div>
-          <label>Inlays</label>
-          <br/>
-          <input
-            type='text'
-            id='inlays'
-            ref={(input) => {_inlays = input;}}/>
-        </div>
-        <div>
-          <label>Nut Material</label>
-          <br/>
-          <input
-            type='text'
-            id='nutMaterial'
-            ref={(input) => {_nutMaterial = input;}}/>
-        </div>
-        <div>
-          <label>Nut Width</label>
-          <br/>
-          <input
-            type='number'
-            id='nutWidth'
-            ref={(input) => {_nutWidth = input;}}/>
-        </div>
-        <div>
-          <label>Scale Length</label>
-          <br/>
-          <input
-            type='number'
-            step='0.01'
-            id='scaleLength'
-            ref={(input) => {_scaleLength = input;}}/>
-        </div>
-        <h2>Electronics</h2>
-        <hr/>
-        <div>
-          <label>Neck Pickup</label>
-          <br/>
-          <input
-            type='text'
-            id='neckPickup'
-            ref={(input) => {_neckPickup = input;}}/>
-        </div>
-        <div>
-          <label>Middle Pickup</label>
-          <br/>
-          <input
-            type='text'
-            id='middlePickup'
-            ref={(input) => {_middlePickup = input;}}/>
-        </div>
-        <div>
-          <label>Bridge Pickup</label>
-          <br/>
-          <input
-            type='text'
-            id='bridgePickup'
-            ref={(input) => {_bridgePickup = input;}}/>
-        </div>
-        <div>
-          <label>Volume Pot(s)</label>
-          <br/>
-          <input
-            type='text'
-            id='volumePots'
-            ref={(input) => {_volumePots = input;}}/>
-        </div>
-        <div>
-          <label>Tone Pot(s)</label>
-          <br/>
-          <input
-            type='text'
-            id='tonePots'
-            ref={(input) => {_tonePots = input;}}/>
-        </div>
-        <div>
-          <label>Capacitor</label>
-          <br/>
-          <input
-            type='text'
-            id='capacitor'
-            ref={(input) => {_capacitor = input;}}/>
-        </div>
-        <div>
-          <label>Controls</label>
-          <br/>
-          <input
-            type='text'
-            id='controls'
-            ref={(input) => {_controls = input;}}/>
-        </div>
-        <h2>Hardware</h2>
-        <hr/>
-        <div>
-          <label>Tuning Machines</label>
-          <br/>
-          <input
-            type='text'
-            id='tuners'
-            ref={(input) => {_tuners = input;}}/>
-        </div>
-        <div>
-          <label>Tuner Buttons</label>
-          <br/>
-          <input
-            type='text'
-            id='tunerButtons'
-            ref={(input) => {_tunerButtons = input;}}/>
-        </div>
-        <div>
-          <label>Bridge</label>
-          <br/>
-          <input
-            type='text'
-            id='bridge'
-            ref={(input) => {_bridge = input;}}/>
-        </div>
-        <div>
-          <label>Tailpiece</label>
-          <br/>
-          <input
-            type='text'
-            id='tailpiece'
-            ref={(input) => {_tailpiece = input;}}/>
-        </div>
-        <div>
-          <label>Switch</label>
-          <br/>
-          <input
-            type='text'
-            id='guitarSwitch'
-            ref={(input) => {_guitarSwitch = input;}}/>
-        </div>
-        <div>
-          <label>Knobs</label>
-          <br/>
-          <input
-            type='text'
-            id='knobs'
-            ref={(input) => {_knobs = input;}}/>
-        </div>
-        <div>
-          <label>Pickguard</label>
-          <br/>
-          <input
-            type='text'
-            id='pickguard'
-            ref={(input) => {_pickguard = input;}}/>
-        </div>
-        <h2>Accessories</h2>
-        <hr/>
-        <div>
-          <label>Guitar Case</label>
-          <br/>
-          <input
-            type='text'
-            id='guitarCase'
-            ref={(input) => {_guitarCase = input;}}/>
-        </div>
-        <br/>
         <button type='submit'>Add Guitar</button>
       </form>
     </div>

@@ -104,15 +104,8 @@ ul {
 
 .pedal-dropdown:hover .pedal-dropdown-content {display: block;}
 
-button {
-    height: 25px;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    width: 25px;
-}
-
 #search-button {
+  vertical-align: top;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
